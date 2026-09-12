@@ -223,5 +223,7 @@ Lista de comprobación mínima. Ninguno de estos puntos está cumplido al día d
 - [ ] Respaldo automatizado y **una prueba de restauración completa ya ejecutada**
 - [ ] Bitácora de auditoría con escritores en las operaciones sensibles
 - [ ] Autenticación con verificación de membresía antes de fijar la organización activa
+- [ ] Limitación de tasa en `POST /api/prospectos`, que hoy acepta datos personales sin
+      autenticación y sin freno
 - [ ] Corpus con calendarios 2027 cargados, o aviso visible de que el sistema no computa plazos que
       crucen el año

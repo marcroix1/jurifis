@@ -9,8 +9,13 @@ autenticación necesita, pero no existe el código que las usa.
 
 ## Autenticación
 
-**Pendiente de implementación.** No hay proveedor de identidad configurado, no hay manejo de
-sesión, no hay endpoint de inicio de sesión. `apps/web` es andamio.
+**Pendiente de implementación.** No hay proveedor de identidad configurado, no hay manejo de sesión
+y no hay endpoint de inicio de sesión.
+
+**Los dos endpoints que ya existen son públicos.** `POST /api/plazos/calcular` y
+`POST /api/prospectos` no verifican nada y no tocan `packages/db`. El primero es cálculo puro sobre
+el corpus, que es derecho publicado, y su exposición no compromete datos de cliente. El segundo sí
+recibe datos personales, y se trata aparte más abajo.
 
 Lo que el esquema ya prevé, en la tabla `users` de `packages/db/src/schema.ts`:
 
@@ -122,6 +127,42 @@ caso por caso, con autorización del despacho, y queda en `audit_log`.
 El aislamiento es tan fuerte como la resolución de la organización en la sesión. Un defecto en el
 código que decide qué organización fijar sí puede cruzar el límite. Ese es el punto que las pruebas
 de aislamiento, todavía inexistentes, deben cubrir primero.
+
+## Superficie pública actual
+
+Dos endpoints, sin autenticación.
+
+### `POST /api/plazos/calcular`
+
+Riesgo bajo por lo que toca: solo lee el corpus, que es derecho publicado, y no escribe nada.
+Controles ya presentes:
+
+- Validación con Zod antes de llamar al motor.
+- La forma de notificación se valida contra las formas que alguna regla del corpus declara,
+  derivadas del dato y no escritas a mano.
+- Las suspensiones están topadas en cincuenta por petición y exigen motivo y fundamento no vacíos.
+
+Falta: limitación de tasa. Cada petición corre el conteo de días hábiles del motor, y el tope
+defensivo del conteo es de cuatro mil iteraciones.
+
+### `POST /api/prospectos`
+
+**Recibe datos personales sin autenticación:** nombre, correo electrónico, teléfono, organización y
+una descripción libre de hasta dos mil caracteres sobre la situación del prospecto. Ese último
+campo es el delicado, porque un prospecto puede escribir ahí hechos de su asunto.
+
+Estado del almacenamiento: los prospectos viven en un arreglo en memoria del proceso
+(`apps/web/src/lib/almacen.ts`), colgado de `globalThis`. Se pierden al reiniciar. El código lo
+declara y la respuesta lo devuelve como `"persistencia": "memoria"`, en lugar de aparentar que el
+dato quedó guardado. Honesto, pero no es almacenamiento aceptable para datos personales en
+producción.
+
+Pendiente antes de exponerlo:
+
+1. Limitación de tasa y defensa contra envío automatizado.
+2. Persistencia en la tabla `leads`, que ya existe y está bajo aislamiento por organización.
+3. Aviso de privacidad en el formulario, con la finalidad del tratamiento.
+4. Registro del alta en `audit_log`.
 
 ## Manejo de documentos
 
@@ -256,8 +297,12 @@ dirección de red tomada de una variable de entorno arbitraria.
 | Bitácora inalterable por política y por permiso | Implementado |
 | Catálogo jurídico sin escritura desde la aplicación | Implementado |
 | Huella `sha256` obligatoria en documentos | Implementado en el esquema |
-| Pruebas de aislamiento | **Pendiente** |
-| Autenticación y sesión | **Pendiente** |
+| Pruebas de estructura del esquema y del texto de `rls.sql` | Implementadas, 34 casos |
+| Pruebas de aislamiento contra una base viva | **Pendiente** |
+| Validación de entrada en los dos endpoints existentes | Implementada con Zod |
+| Autenticación y sesión | **Pendiente**, los dos endpoints son públicos |
+| Limitación de tasa | **Pendiente** |
+| Persistencia y aviso de privacidad de los prospectos | **Pendiente**, hoy viven en memoria |
 | Autorización por rol dentro de la organización | **Pendiente** |
 | Escritores de la bitácora | **Pendiente** |
 | Los cuatro candados del envío a proveedor de modelos de lenguaje | **Pendiente** en código |

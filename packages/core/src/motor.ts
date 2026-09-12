@@ -121,26 +121,16 @@ export function calcularPlazo(
     fundamento: regla.fundamento,
   });
 
-  // Paso 4. Cobertura del calendario. Ventana generosa para no calcular a ciegas.
-  const margen =
-    regla.plazo.unidad === 'dias_habiles' ? regla.plazo.cantidad * 3 + 60
-    : regla.plazo.unidad === 'dias_naturales' ? regla.plazo.cantidad + 60
-    : regla.plazo.unidad === 'meses' ? regla.plazo.cantidad * 31 + 60
-    : regla.plazo.cantidad * 366 + 60;
-  const huecos = almanaque.cobertura(inicio, sumarDias(inicio, margen));
-  if (huecos.length > 0) {
-    traza.push({
-      paso: 4,
-      concepto: 'cobertura del calendario',
-      detalle: 'Incompleta. El motor se detiene aqui en lugar de estimar.',
-    });
-    return vacio('insuficiente', traza, fuentes, huecos, advertencias);
-  }
-  traza.push({
-    paso: 4,
-    concepto: 'cobertura del calendario',
-    detalle: `Completa. Calendarios aplicados: ${almanaque.ids.join(', ')}.`,
-  });
+  // Paso 4. Cobertura del calendario.
+  //
+  // Se verifica contra el periodo REALMENTE recorrido, no contra una ventana
+  // estimada por exceso. Una ventana generosa produce el falso negativo mas
+  // caro que existe aqui: negarse a calcular un plazo que si esta cubierto,
+  // solo porque la estimacion se asomo a un anio que nadie iba a tocar.
+  //
+  // Por eso el paso 4 se emite despues del conteo, cuando ya se sabe hasta
+  // que dia llego el plazo. Sigue siendo fail closed: si el periodo recorrido
+  // toca un anio sin cargar o un hueco declarado, no se devuelve fecha.
 
   // Pasos 5 y 6. Conteo con las suspensiones registradas.
   const inhabilesAplicados: DiaInhabil[] = [];
@@ -192,6 +182,20 @@ export function calcularPlazo(
     if (r.diaInexistente) advertencias.push('El dia equivalente no existe en el mes de vencimiento. Verifica la regla especifica del ordenamiento.');
   }
 
+  const huecos = almanaque.cobertura(inicio, vence);
+  if (huecos.length > 0) {
+    traza.push({
+      paso: 4,
+      concepto: 'cobertura del calendario',
+      detalle: `El plazo recorre del ${inicio} al ${vence} y el calendario no cubre todo ese periodo. El motor se detiene aqui en lugar de estimar.`,
+    });
+    return vacio('insuficiente', traza, fuentes, huecos, advertencias);
+  }
+  traza.push({
+    paso: 4,
+    concepto: 'cobertura del calendario',
+    detalle: `Completa para el periodo del ${inicio} al ${vence}. Calendarios aplicados: ${almanaque.ids.join(', ')}.`,
+  });
   traza.push({ paso: 5, concepto: 'conteo', fecha: vence, detalle: notaConteo });
   traza.push({
     paso: 6,
