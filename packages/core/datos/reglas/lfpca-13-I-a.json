@@ -1,6 +1,6 @@
 {
   "inicio": {
-    "primerDia": "siguiente_habil"
+    "primerDia": "siguiente_natural"
   },
   "prorrogaSiVenceInhabil": true,
   "incluyeDiaVencimiento": true,
@@ -52,6 +52,19 @@
         "publicacion": "Texto vigente, ultima reforma DOF 09-04-2026",
         "archivo": "CFF.md",
         "linea": 14647
+      }
+    },
+    {
+      "forma": "boletin_jurisdiccional",
+      "desplazamiento": 2,
+      "unidad": "dias_habiles",
+      "fundamento": {
+        "ordenamiento": "Ley Federal de Procedimiento Contencioso Administrativo",
+        "articulo": "65",
+        "publicacion": "Texto vigente, ultima reforma DOF 09-06-2026",
+        "archivo": "LFPCA.md",
+        "linea": 3082,
+        "parrafo": "penultimo"
       }
     }
   ],

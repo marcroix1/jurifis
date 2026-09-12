@@ -17,6 +17,7 @@ export type FormaNotificacion =
   | 'personal'
   | 'oficio'
   | 'lista_o_estrados'
+  | 'boletin_jurisdiccional'
   | 'buzon_tributario'
   | 'correo_certificado'
   | 'edictos'

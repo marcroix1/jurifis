@@ -56,9 +56,23 @@ describe('la negativa a estimar', () => {
   });
 
   it('devuelve insuficiente si no hay regla de surtimiento para esa forma', () => {
-    const r = calcular({ reglaId: 'lfpca-17', fechaNotificacion: '2026-03-02', formaNotificacion: 'personal' });
+    const r = calcular({ reglaId: 'lfpca-17', fechaNotificacion: '2026-03-02', formaNotificacion: 'edictos' });
     expect(r.confianza).toBe('insuficiente');
     expect(r.vence).toBeNull();
+    expect(r.faltantes.join(' ')).toContain('surtimiento');
+  });
+
+  it('la notificacion por Boletin Jurisdiccional surte al segundo dia habil', () => {
+    const r = calcular({ reglaId: 'lfpca-17', fechaNotificacion: '2026-03-02', formaNotificacion: 'boletin_jurisdiccional' });
+    expect(r.surteEfectos).toBe('2026-03-04');
+    expect(r.inicioComputo).toBe('2026-03-05');
+    expect(r.vence).not.toBeNull();
+  });
+
+  it('la via sumaria y la ordinaria no dan la misma fecha', () => {
+    const ord = calcular({ reglaId: 'lfpca-19', fechaNotificacion: '2026-03-02', formaNotificacion: 'boletin_jurisdiccional' });
+    const sum = calcular({ reglaId: 'lfpca-58-4', fechaNotificacion: '2026-03-02', formaNotificacion: 'boletin_jurisdiccional' });
+    expect(ord.vence).not.toBe(sum.vence);
   });
 
   it('rechaza una regla que no existe en el corpus', () => {

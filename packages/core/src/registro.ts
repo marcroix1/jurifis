@@ -24,11 +24,20 @@ import rLamp86 from '../datos/reglas/lamp-86.json' with { type: 'json' };
 import rLamp98 from '../datos/reglas/lamp-98.json' with { type: 'json' };
 import rLfpa85 from '../datos/reglas/lfpa-85.json' with { type: 'json' };
 
+import rlfpca_58_2 from '../datos/reglas/lfpca-58-2.json' with { type: 'json' };
+import rlfpca_58_4 from '../datos/reglas/lfpca-58-4.json' with { type: 'json' };
+import rlfpca_58_6 from '../datos/reglas/lfpca-58-6.json' with { type: 'json' };
+import rlfpca_58_8 from '../datos/reglas/lfpca-58-8.json' with { type: 'json' };
+import rlfpca_59 from '../datos/reglas/lfpca-59.json' with { type: 'json' };
+import rlfpca_62 from '../datos/reglas/lfpca-62.json' with { type: 'json' };
+import rlfpca_63 from '../datos/reglas/lfpca-63.json' with { type: 'json' };
+
 export const CALENDARIOS: Calendario[] = [calTfja, calSat, calCff, calAmparo, calLfpa] as unknown as Calendario[];
 
 export const REGLAS: ReglaPlazo[] = [
   rLfpca13, rLfpca17, rLfpca19, rCff121, rLa150, rLa155, rRri6,
   rLamp17, rLamp17I, rLamp86, rLamp98, rLfpa85,
+  rlfpca_58_2, rlfpca_58_4, rlfpca_58_6, rlfpca_58_8, rlfpca_59, rlfpca_62, rlfpca_63,
 ] as unknown as ReglaPlazo[];
 
 export class ReglaDesconocida extends Error {

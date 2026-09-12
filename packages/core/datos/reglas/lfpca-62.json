@@ -1,18 +1,13 @@
 {
+  "id": "lfpca-62",
+  "procedimiento": "recurso_de_reclamacion_medidas_cautelares",
+  "descripcion": "Recurso de reclamacion contra resoluciones sobre medidas cautelares",
+  "plazo": {
+    "cantidad": 5,
+    "unidad": "dias_habiles"
+  },
   "inicio": {
     "primerDia": "siguiente_natural"
-  },
-  "prorrogaSiVenceInhabil": true,
-  "incluyeDiaVencimiento": true,
-  "vigenteHasta": null,
-  "nivelFuente": "A",
-  "verificadoEl": "2026-09-12",
-  "id": "lfpca-19",
-  "procedimiento": "juicio_contencioso_administrativo_federal_contestacion",
-  "descripcion": "Contestacion de la demanda de nulidad",
-  "plazo": {
-    "cantidad": 30,
-    "unidad": "dias_habiles"
   },
   "surtimiento": [
     {
@@ -69,12 +64,17 @@
   "calendarios": [
     "tfja-2026"
   ],
+  "prorrogaSiVenceInhabil": true,
+  "incluyeDiaVencimiento": true,
   "fundamento": {
     "ordenamiento": "Ley Federal de Procedimiento Contencioso Administrativo",
-    "articulo": "19",
+    "articulo": "62",
     "publicacion": "Texto vigente, ultima reforma DOF 09-06-2026",
     "archivo": "LFPCA.md",
-    "linea": 793
+    "linea": 2923
   },
-  "vigenteDesde": "2016-06-13"
+  "vigenteDesde": "2016-06-13",
+  "vigenteHasta": null,
+  "nivelFuente": "A",
+  "verificadoEl": "2026-09-12"
 }

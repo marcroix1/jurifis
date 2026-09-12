@@ -1,18 +1,13 @@
 {
+  "id": "lfpca-59",
+  "procedimiento": "recurso_de_reclamacion",
+  "descripcion": "Recurso de reclamacion, regla general",
+  "plazo": {
+    "cantidad": 10,
+    "unidad": "dias_habiles"
+  },
   "inicio": {
     "primerDia": "siguiente_natural"
-  },
-  "prorrogaSiVenceInhabil": true,
-  "incluyeDiaVencimiento": true,
-  "vigenteHasta": null,
-  "nivelFuente": "A",
-  "verificadoEl": "2026-09-12",
-  "id": "lfpca-19",
-  "procedimiento": "juicio_contencioso_administrativo_federal_contestacion",
-  "descripcion": "Contestacion de la demanda de nulidad",
-  "plazo": {
-    "cantidad": 30,
-    "unidad": "dias_habiles"
   },
   "surtimiento": [
     {
@@ -69,12 +64,17 @@
   "calendarios": [
     "tfja-2026"
   ],
+  "prorrogaSiVenceInhabil": true,
+  "incluyeDiaVencimiento": true,
   "fundamento": {
     "ordenamiento": "Ley Federal de Procedimiento Contencioso Administrativo",
-    "articulo": "19",
+    "articulo": "59",
     "publicacion": "Texto vigente, ultima reforma DOF 09-06-2026",
     "archivo": "LFPCA.md",
-    "linea": 793
+    "linea": 2891
   },
-  "vigenteDesde": "2016-06-13"
+  "vigenteDesde": "2016-06-13",
+  "vigenteHasta": null,
+  "nivelFuente": "A",
+  "verificadoEl": "2026-09-12"
 }
