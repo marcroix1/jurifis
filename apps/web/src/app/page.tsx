@@ -21,16 +21,16 @@ const MODULOS = [
   {
     titulo: 'Buscar jurisprudencia',
     descripcion:
-      'Consulta de criterios publicados, con su clave y sus datos de localización. Entra en una siguiente entrega.',
-    href: null,
-    disponible: false,
+      'Buscador de criterios con su tipo, órgano, época y registro digital. El acervo está vacío a propósito: sin verificación humana, no hay cita.',
+    href: '/jurisprudencia',
+    disponible: true,
   },
   {
     titulo: 'Calcular crédito fiscal',
     descripcion:
-      'Cálculo de los accesorios de un crédito fiscal con la memoria del cálculo. Entra en una siguiente entrega.',
-    href: null,
-    disponible: false,
+      'Estimación de actualización, recargos y saldo, con la memoria del cálculo y sus fuentes. Nunca una determinación oficial.',
+    href: '/credito',
+    disponible: true,
   },
 ];
 

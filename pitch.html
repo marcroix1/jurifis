@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JURIFIS · Pitch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+/* ═══ NO TOCAR: sistema visual ═══ */
+:root{
+  --ink:#1E293B; --ink-soft:#334155; --muted:#64748B;
+  --bg:#FAFBFE; --paper:#FFFFFF; --bg-paper:#F8FAFC; --line:#E2E8F0;
+  --accent:#4570EB; --accent-soft:#EFF6FF; --accent-deep:#1D4ED8;
+  --navy:#0F172A; --green:#16A34A; --green-soft:#F0FDF4;
+  --amber:#B45309; --amber-soft:#FFFBEB; --amber-line:#FDE68A;
+  --violet:#A818F0; --coral:#F06838;
+  --grad:linear-gradient(90deg,#3860D8 0%,#A818F0 55%,#F06838 100%);
+  --shadow:0 1px 3px rgba(30,41,59,.05),0 12px 32px rgba(30,41,59,.07);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif;
+  font-size:17px;line-height:1.6;
+  background:
+    radial-gradient(ellipse 70% 50% at 85% 0%, rgba(165,180,252,.28), transparent 60%),
+    radial-gradient(ellipse 60% 45% at 5% 60%, rgba(196,181,253,.18), transparent 60%),
+    var(--bg);
+  background-attachment:fixed;
+  scroll-snap-type:y mandatory;overflow-y:scroll;height:100vh;
+}
+.slide{
+  scroll-snap-align:center;min-height:100vh;display:flex;align-items:center;
+  padding:40px 24px;
+}
+.frame{
+  width:min(1100px,100%);aspect-ratio:16/9;background:var(--paper);
+  border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);
+  margin:0 auto;padding:46px 54px;display:flex;flex-direction:column;
+  position:relative;overflow:hidden;
+}
+.frame::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad)}
+.num{position:absolute;bottom:22px;right:28px;font-family:'Fraunces',Georgia,serif;
+  font-size:.82rem;color:var(--muted)}
+.eyebrow{font-size:.68rem;font-weight:800;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--accent-deep);margin-bottom:14px}
+h1{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(2.2rem,4.6vw,3.6rem);
+  line-height:1.04;letter-spacing:-.035em;margin:0 0 16px;text-wrap:balance}
+h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(1.7rem,3.2vw,2.3rem);
+  line-height:1.12;letter-spacing:-.03em;margin:0 0 18px;text-wrap:balance}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tagline{font-size:1.2rem;color:var(--ink-soft);font-weight:500;max-width:60ch;margin:0 0 auto}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.pill{background:var(--bg-paper);border:1px solid var(--line);border-radius:999px;
+  padding:7px 15px;font-size:.8rem;font-weight:600;color:var(--ink-soft)}
+.pill b{color:var(--accent-deep);font-weight:800}
+ul.points{list-style:none;margin:0 0 auto;padding:0;display:flex;flex-direction:column;gap:13px}
+ul.points li{position:relative;padding-left:32px;font-size:1.05rem;color:var(--ink-soft);max-width:62ch}
+ul.points li::before{content:"";position:absolute;left:0;top:.55em;width:11px;height:11px;
+  border-radius:50%;background:var(--grad)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-bottom:auto}
+.box{background:var(--bg-paper);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:12px;padding:18px 20px}
+.box.ok{border-left-color:var(--green);background:var(--green-soft)}
+.box.falta{border-left-color:var(--amber);background:var(--amber-soft)}
+.box h3{margin:0 0 10px;font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent-deep)}
+.box.ok h3{color:var(--green)} .box.falta h3{color:var(--amber)}
+.box ul{margin:0;padding-left:18px;font-size:.94rem;color:var(--ink-soft)}
+.box li{margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{background:var(--accent-soft);border:1px solid #BFDBFE;color:var(--accent-deep);
+  border-radius:999px;padding:5px 13px;font-size:.78rem;font-weight:700}
+.dark{background:var(--navy);color:#fff;border-radius:12px;padding:20px 24px;margin-bottom:auto}
+.dark .t{font-size:.66rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#93B4FF}
+.dark p{margin:8px 0 0;color:rgba(255,255,255,.86);font-size:1.02rem}
+.demo{display:inline-block;margin-top:18px;font-size:.92rem;font-weight:700;color:var(--accent-deep)}
+.pend{background:var(--amber-soft);border:1px solid var(--amber-line);color:var(--amber);
+  border-radius:999px;padding:1px 9px;font-size:.74rem;font-weight:800}
+
+/* Cuadro editable: el creador escribe aquí, en el navegador */
+.mine{margin-top:20px;border:1.5px dashed #C7D2FE;border-radius:12px;padding:14px 18px;
+  background:rgba(239,246,255,.55);min-height:64px;font-size:.95rem;color:var(--ink-soft);outline:none}
+.mine:focus{border-color:var(--accent);background:#fff}
+.mine .lbl{display:block;font-size:.62rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--accent-deep);margin-bottom:6px}
+.mine .ph{color:#94A3B8;font-style:italic}
+
+.hint{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:9;
+  background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:999px;
+  padding:6px 15px;font-size:.74rem;font-weight:600;color:var(--muted);box-shadow:var(--shadow)}
+
+@media(max-width:820px){
+  .frame{aspect-ratio:auto;min-height:80vh;padding:30px 26px}
+  .split{grid-template-columns:1fr}
+}
+/* PDF 16:9 — una diapositiva por página */
+@page{size:1280px 720px;margin:0}
+@media print{
+  body{background:#fff;height:auto;overflow:visible;scroll-snap-type:none;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .slide{display:block;width:1280px;height:720px;min-height:0;padding:0;
+    page-break-after:always;break-after:page}
+  .slide:last-child{page-break-after:auto;break-after:auto}
+  .frame{width:1280px;height:720px;aspect-ratio:auto;border:0;border-radius:0;
+    box-shadow:none;padding:52px 62px}
+  .split{grid-template-columns:1fr 1fr}
+  .mine{background:#fff}
+  .mine:has(.ph){display:none}   /* si nadie escribió, el cuadro no sale en el PDF */
+  .hint{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ 1 · PORTADA ═══ -->
+<section class="slide">
+  <div class="frame">
+    <div class="eyebrow">Hackatón · Claude para abogados</div>
+    <h1>JURIFIS</h1>
+    <p class="tagline">Calcula plazos fiscales y se niega a inventar la fecha cuando le falta la fuente.</p>
+    <div class="meta">
+      <span class="pill">Por <b>Marco, NOVA LEGAL, S.C.</b></span>
+      <span class="pill">12 de septiembre de 2026</span>
+    </div>
+    <div class="mine" contenteditable="true">
+      <span class="lbl">En tus palabras</span>
+      <span class="ph">Cómo lo vas a presentar en voz alta. Escribe aquí.</span>
+    </div>
+    <span class="num">1 / 5</span>
+  </div>
+</section>
+
+<!-- ═══ 2 · EL DOLOR ═══ -->
+<section class="slide">
+  <div class="frame">
+    <div class="eyebrow">El problema</div>
+    <h2>Abogados fiscalistas, empresas y contribuyentes frente a una autoridad</h2>
+    <div class="dark">
+      <span class="t">Lo que cuesta hoy</span>
+      <p>Un plazo mal contado por un solo día tira el asunto completo, sin recurso</p>
+    </div>
+    <ul class="points">
+      <li>El plazo se cuenta a mano, contra calendarios dispersos</li>
+      <li>Cuatro leyes dan cuatro respuestas distintas al mismo cómputo</li>
+      <li>Las herramientas con inteligencia artificial inventan tesis y artículos</li>
+    </ul>
+    <div class="mine" contenteditable="true">
+      <span class="lbl">En tus palabras</span>
+      <span class="ph">El caso real que te hizo construir esto.</span>
+    </div>
+    <span class="num">2 / 5</span>
+  </div>
+</section>
+
+<!-- ═══ 3 · LA SOLUCIÓN ═══ -->
+<section class="slide">
+  <div class="frame">
+    <div class="eyebrow">La solución</div>
+    <h2 class="grad">El derecho vive como dato verificado con su fuente, no dentro del código.</h2>
+    <ul class="points">
+      <li>Calcula el plazo y muestra la traza de los ocho pasos</li>
+      <li>Cada fecha se rastrea hasta el archivo y la línea de la ley</li>
+      <li>Si falta el calendario, no da fecha: dice qué falta</li>
+    </ul>
+    <a class="demo" href="github.com/marcroix1/jurifis" target="_blank" rel="noopener">Ver funcionando: github.com/marcroix1/jurifis</a>
+    <div class="mine" contenteditable="true">
+      <span class="lbl">En tus palabras</span>
+      <span class="ph">Qué vas a enseñar en vivo y en qué orden.</span>
+    </div>
+    <span class="num">3 / 5</span>
+  </div>
+</section>
+
+<!-- ═══ 4 · CÓMO ESTÁ HECHO ═══ -->
+<section class="slide">
+  <div class="frame">
+    <div class="eyebrow">Cómo está hecho</div>
+    <div class="chips"><span class="chip">TypeScript estricto</span><span class="chip">Next.js 15</span><span class="chip">React 19</span><span class="chip">PostgreSQL con Row Level Security</span><span class="chip">Drizzle</span><span class="chip">Vitest</span><span class="chip">Tailwind</span></div>
+    <div class="split">
+      <div class="box ok">
+        <h3>Ya funciona</h3>
+        <ul><li>19 reglas de plazo verificadas en seis ordenamientos</li><li>Calculadora, diagnóstico, jurisprudencia, crédito fiscal y expedientes</li><li>167 pruebas en verde y aislamiento por organización en la base</li></ul>
+      </div>
+      <div class="box falta">
+        <h3>Falta</h3>
+        <ul><li>Acervo de jurisprudencia vacío: ninguna tesis verificada todavía</li><li>Autenticación del panel y pruebas contra base real</li></ul>
+      </div>
+    </div>
+    <div class="mine" contenteditable="true">
+      <span class="lbl">En tus palabras</span>
+      <span class="ph">La decisión técnica de la que estás más orgulloso.</span>
+    </div>
+    <span class="num">4 / 5</span>
+  </div>
+</section>
+
+<!-- ═══ 5 · QUÉ SIGUE ═══ -->
+<section class="slide">
+  <div class="frame">
+    <div class="eyebrow">Qué sigue</div>
+    <h2>Cargar el primer criterio verificado y poner candado al panel</h2>
+    <div class="dark">
+      <span class="t">Lo que pido</span>
+      <p>[por definir: qué le pides al jurado]</p>
+    </div>
+    <div class="mine" contenteditable="true">
+      <span class="lbl">En tus palabras</span>
+      <span class="ph">Con qué frase quieres que se queden.</span>
+    </div>
+    <span class="num">5 / 5</span>
+  </div>
+</section>
+
+<div class="hint">Flechas o scroll para avanzar · Imprimir en horizontal con fondos para el PDF</div>
+
+<script>
+(function(){
+  'use strict';
+  var s = [].slice.call(document.querySelectorAll('.slide')), i = 0;
+  function go(n){ i = Math.max(0, Math.min(s.length-1, n)); s[i].scrollIntoView({behavior:'smooth'}); }
+  document.addEventListener('keydown', function(e){
+    if(e.target.isContentEditable) return;
+    if(e.key==='ArrowRight'||e.key==='ArrowDown'||e.key===' '){ e.preventDefault(); go(i+1); }
+    if(e.key==='ArrowLeft'||e.key==='ArrowUp'){ e.preventDefault(); go(i-1); }
+  });
+  document.addEventListener('scroll', function(){
+    s.forEach(function(el,k){ if(Math.abs(el.getBoundingClientRect().top) < window.innerHeight/2) i = k; });
+  }, {passive:true});
+  document.querySelectorAll('.mine').forEach(function(b){
+    b.addEventListener('focus', function(){
+      var ph = b.querySelector('.ph'); if(ph) ph.remove();
+    });
+  });
+})();
+</script>
+</body>
+</html>
