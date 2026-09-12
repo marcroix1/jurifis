@@ -2,6 +2,7 @@ export * from './fecha.js';
 export * from './tipos.js';
 export { Almanaque } from './calendario.js';
 export { calcularPlazo } from './motor.js';
+export * from './diagnostico/index.js';
 export { REGLAS, CALENDARIOS, buscarRegla, almanaqueDe, ReglaDesconocida, CalendarioFaltante } from './registro.js';
 
 import { calcularPlazo } from './motor.js';

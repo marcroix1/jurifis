@@ -1,0 +1,192 @@
+{
+  "version": "2026-09-12",
+  "titulo": "Cuestionario preliminar sobre la posibilidad de impugnar un acto de autoridad",
+  "preguntas": [
+    {
+      "id": "autoridad",
+      "texto": "Que autoridad emitio el acto",
+      "tipo": "opcion_unica",
+      "ayuda": "Se lee en el encabezado, en el sello y en la firma del documento.",
+      "permiteNoSe": true,
+      "opciones": [
+        { "valor": "sat", "etiqueta": "Servicio de Administracion Tributaria" },
+        { "valor": "aduanas", "etiqueta": "Agencia Nacional de Aduanas de Mexico" },
+        { "valor": "imss", "etiqueta": "Instituto Mexicano del Seguro Social" },
+        { "valor": "infonavit", "etiqueta": "Instituto del Fondo Nacional de la Vivienda para los Trabajadores" },
+        { "valor": "fiscal_estatal", "etiqueta": "Autoridad fiscal de una entidad federativa o de un municipio" },
+        { "valor": "otra_federal", "etiqueta": "Otra autoridad administrativa federal" }
+      ]
+    },
+    {
+      "id": "tipo_acto",
+      "texto": "Que tipo de acto es",
+      "tipo": "opcion_unica",
+      "ayuda": "Si el documento contiene varios actos, elige el que se pretende combatir.",
+      "permiteNoSe": true,
+      "opciones": [
+        { "valor": "determinacion_contribuciones", "etiqueta": "Resolucion que determina contribuciones, cuotas o aportaciones a cargo" },
+        { "valor": "multa", "etiqueta": "Multa" },
+        { "valor": "negativa_devolucion", "etiqueta": "Negativa total o parcial a una solicitud de devolucion" },
+        { "valor": "acta_o_requerimiento", "etiqueta": "Acta, oficio o requerimiento dentro de una revision todavia en curso" },
+        { "valor": "resolucion_de_recurso", "etiqueta": "Resolucion que recayo a un recurso administrativo ya interpuesto" },
+        { "valor": "cobro_o_ejecucion", "etiqueta": "Acto de cobro o de ejecucion, por ejemplo requerimiento de pago o diligencia de embargo" },
+        { "valor": "otro", "etiqueta": "Otro acto de autoridad" }
+      ]
+    },
+    {
+      "id": "fecha_notificacion",
+      "texto": "Cuando te notificaron el acto",
+      "tipo": "fecha",
+      "ayuda": "La fecha que consta en la constancia de notificacion, no la fecha del oficio.",
+      "permiteNoSe": true
+    },
+    {
+      "id": "monto",
+      "texto": "Que cantidad esta involucrada",
+      "tipo": "monto",
+      "ayuda": "El total del acto, incluidos accesorios, tal como aparece en el documento.",
+      "moneda": "MXN",
+      "permiteNoSe": true
+    },
+    {
+      "id": "existe_credito_fiscal",
+      "texto": "Ya existe un credito fiscal determinado",
+      "tipo": "opcion_unica",
+      "ayuda": "Existe cuando el documento fija una cantidad liquida a cargo y un numero de credito.",
+      "permiteNoSe": true,
+      "opciones": [
+        { "valor": "si", "etiqueta": "Si" },
+        { "valor": "no", "etiqueta": "No" }
+      ]
+    },
+    {
+      "id": "procedimiento_ejecucion",
+      "texto": "Hay procedimiento administrativo de ejecucion en curso",
+      "tipo": "opcion_unica",
+      "ayuda": "Lo hay cuando la autoridad ya requirio el pago o inicio actos de cobro forzoso.",
+      "permiteNoSe": true,
+      "opciones": [
+        { "valor": "si", "etiqueta": "Si" },
+        { "valor": "no", "etiqueta": "No" }
+      ]
+    },
+    {
+      "id": "hubo_embargo",
+      "texto": "Hubo embargo",
+      "tipo": "opcion_unica",
+      "permiteNoSe": true,
+      "condicion": { "operador": "igual", "pregunta": "procedimiento_ejecucion", "valor": "si" },
+      "opciones": [
+        { "valor": "si", "etiqueta": "Si" },
+        { "valor": "no", "etiqueta": "No" }
+      ]
+    },
+    {
+      "id": "embargo_cuentas",
+      "texto": "Se embargaron cuentas bancarias",
+      "tipo": "opcion_unica",
+      "ayuda": "Incluye la inmovilizacion de depositos aunque no se haya retirado el dinero.",
+      "permiteNoSe": true,
+      "condicion": { "operador": "igual", "pregunta": "hubo_embargo", "valor": "si" },
+      "opciones": [
+        { "valor": "si", "etiqueta": "Si" },
+        { "valor": "no", "etiqueta": "No" }
+      ]
+    },
+    {
+      "id": "es_multa",
+      "texto": "El acto impone una multa",
+      "tipo": "opcion_unica",
+      "permiteNoSe": true,
+      "condicion": {
+        "operador": "o",
+        "condiciones": [
+          { "operador": "en", "pregunta": "tipo_acto", "valores": ["acta_o_requerimiento", "cobro_o_ejecucion", "otro"] },
+          { "operador": "no_se", "pregunta": "tipo_acto" }
+        ]
+      },
+      "opciones": [
+        { "valor": "si", "etiqueta": "Si" },
+        { "valor": "no", "etiqueta": "No" }
+      ]
+    },
+    {
+      "id": "es_determinacion_contribuciones",
+      "texto": "El acto determina contribuciones, cuotas o aportaciones a cargo",
+      "tipo": "opcion_unica",
+      "permiteNoSe": true,
+      "condicion": {
+        "operador": "o",
+        "condiciones": [
+          { "operador": "en", "pregunta": "tipo_acto", "valores": ["acta_o_requerimiento", "cobro_o_ejecucion", "otro"] },
+          { "operador": "no_se", "pregunta": "tipo_acto" }
+        ]
+      },
+      "opciones": [
+        { "valor": "si", "etiqueta": "Si" },
+        { "valor": "no", "etiqueta": "No" }
+      ]
+    },
+    {
+      "id": "es_negativa_devolucion",
+      "texto": "El acto niega total o parcialmente una devolucion solicitada",
+      "tipo": "opcion_unica",
+      "permiteNoSe": true,
+      "condicion": {
+        "operador": "o",
+        "condiciones": [
+          { "operador": "en", "pregunta": "tipo_acto", "valores": ["acta_o_requerimiento", "otro"] },
+          { "operador": "no_se", "pregunta": "tipo_acto" }
+        ]
+      },
+      "opciones": [
+        { "valor": "si", "etiqueta": "Si" },
+        { "valor": "no", "etiqueta": "No" }
+      ]
+    },
+    {
+      "id": "hubo_visita_domiciliaria",
+      "texto": "Hubo visita domiciliaria",
+      "tipo": "opcion_unica",
+      "ayuda": "La hay cuando la autoridad se presento en el domicilio y levanto actas.",
+      "permiteNoSe": true,
+      "condicion": {
+        "operador": "no",
+        "condicion": { "operador": "igual", "pregunta": "autoridad", "valor": "otra_federal" }
+      },
+      "opciones": [
+        { "valor": "si", "etiqueta": "Si" },
+        { "valor": "no", "etiqueta": "No" }
+      ]
+    },
+    {
+      "id": "existe_pama",
+      "texto": "Existe un procedimiento administrativo en materia aduanera",
+      "tipo": "opcion_unica",
+      "ayuda": "Existe cuando se levanto acta de inicio con motivo del reconocimiento o de la verificacion de mercancias.",
+      "permiteNoSe": true,
+      "condicion": {
+        "operador": "o",
+        "condiciones": [
+          { "operador": "en", "pregunta": "autoridad", "valores": ["aduanas", "sat"] },
+          { "operador": "no_se", "pregunta": "autoridad" }
+        ]
+      },
+      "opciones": [
+        { "valor": "si", "etiqueta": "Si" },
+        { "valor": "no", "etiqueta": "No" }
+      ]
+    },
+    {
+      "id": "hay_resolucion_definitiva",
+      "texto": "Ya hay una resolucion definitiva",
+      "tipo": "opcion_unica",
+      "ayuda": "Es definitiva cuando la autoridad ya cerro el procedimiento y fijo su ultima palabra.",
+      "permiteNoSe": true,
+      "opciones": [
+        { "valor": "si", "etiqueta": "Si" },
+        { "valor": "no", "etiqueta": "No" }
+      ]
+    }
+  ]
+}
