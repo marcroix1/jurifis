@@ -37,8 +37,18 @@ const esquema = z.object({
   organo: texto(200).optional(),
   epoca: texto(120).optional(),
   materia: texto(160).optional(),
-  limite: z.coerce.number().int().min(1).max(100).optional(),
-  desplazamiento: z.coerce.number().int().min(0).max(10_000).optional(),
+  limite: z.coerce
+    .number({ error: 'El límite de resultados debe ser un número.' })
+    .int('El límite de resultados debe ser un número entero.')
+    .min(1, 'El límite de resultados no puede ser menor que uno.')
+    .max(100, 'El límite de resultados no puede pasar de cien por página.')
+    .optional(),
+  desplazamiento: z.coerce
+    .number({ error: 'El desplazamiento debe ser un número.' })
+    .int('El desplazamiento debe ser un número entero.')
+    .min(0, 'El desplazamiento no puede ser negativo.')
+    .max(10_000, 'El desplazamiento no puede pasar de diez mil.')
+    .optional(),
 });
 
 function sinVacio(valor: string | undefined): string | undefined {

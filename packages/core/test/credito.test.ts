@@ -285,11 +285,23 @@ describe('el submodulo de prescripcion jamas concluye prescripcion por si solo',
     expect(a.prescripcion.conclusion).toBe('requiere_verificacion_de_actos_interruptores');
     expect(a.prescripcion.aniosNaturalesCorridos).toBeGreaterThan(5);
     expect(a.prescripcion.requiereVerificar.length).toBeGreaterThan(0);
-    // Ninguna parte de la salida afirma que el credito prescribio.
-    const texto = JSON.stringify(a).toLowerCase();
-    expect(texto).not.toContain('prescribio');
-    expect(texto).not.toContain('esta prescrito');
-    expect(texto).not.toContain('opera la prescripcion');
+    // Ninguna parte de la salida afirma que el credito prescribio. Las advertencias
+    // se revisan aparte porque ahi si aparece el verbo, dentro de la prohibicion.
+    const afirmaciones = [
+      a.conclusion,
+      a.prescripcion.conclusion,
+      a.caducidad.conclusion,
+      ...a.traza.map((p) => p.detalle),
+      ...a.prescripcion.requiereVerificar,
+      ...a.caducidad.requiereVerificar,
+    ]
+      .join(' ')
+      .toLowerCase();
+    for (const frase of ['prescribio', 'esta prescrito', 'opera la prescripcion', 'ya caduco']) {
+      expect(afirmaciones).not.toContain(frase);
+    }
+    // Y en las advertencias el verbo solo puede aparecer negado.
+    expect(a.advertencias.join(' ')).toContain('Prohibido concluir que un credito prescribio');
   });
 
   it('no existe entrada alguna que le saque otra conclusion', () => {
