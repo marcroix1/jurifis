@@ -15,11 +15,15 @@ interface Calculo {
   forma: string;
 }
 
-export function CalculadoraPlazos({ reglas }: { reglas: ReglaResumen[] }) {
-  const primera = reglas[0];
-  const [reglaId, setReglaId] = useState<string>(primera?.id ?? '');
+export function CalculadoraPlazos({ reglas, reglaSolicitada }: { reglas: ReglaResumen[]; reglaSolicitada?: string }) {
+  // Regla inicial: la que llega por parametro de consulta cuando existe en el
+  // corpus, y si no, la primera. Asi el diagnostico puede enlazar directo a la
+  // regla que corresponde sin que el usuario la vuelva a buscar.
+  const inicial = reglas.find((r) => r.id === reglaSolicitada) ?? reglas[0];
+  const primera = inicial;
+  const [reglaId, setReglaId] = useState<string>(inicial?.id ?? '');
   const [fechaNotificacion, setFechaNotificacion] = useState('');
-  const [forma, setForma] = useState<string>(primera?.formas[0] ?? '');
+  const [forma, setForma] = useState<string>(inicial?.formas[0] ?? '');
   const [usarReferencia, setUsarReferencia] = useState(false);
   const [fechaReferencia, setFechaReferencia] = useState('');
   const [calculo, setCalculo] = useState<Calculo | null>(null);

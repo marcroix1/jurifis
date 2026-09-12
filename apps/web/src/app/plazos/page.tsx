@@ -9,8 +9,15 @@ export const metadata: Metadata = {
     'Cómputo de plazos con traza paso a paso, días inhábiles descartados, fuentes y estado de confianza.',
 };
 
-export default function PaginaPlazos() {
+export default async function PaginaPlazos({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
   const reglas = reglasResumidas();
+  const parametros = await searchParams;
+  const solicitada = parametros.regla;
+  const reglaSolicitada = typeof solicitada === 'string' ? solicitada : undefined;
 
   return (
     <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-16">
@@ -31,7 +38,7 @@ export default function PaginaPlazos() {
       </header>
 
       <div className="mt-10">
-        <CalculadoraPlazos reglas={reglas} />
+        <CalculadoraPlazos reglas={reglas} reglaSolicitada={reglaSolicitada} />
       </div>
     </div>
   );

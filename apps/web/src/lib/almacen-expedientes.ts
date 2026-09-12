@@ -509,22 +509,60 @@ export function agregarEvento(id: string, datos: NuevoEvento): ResultadoEscritur
   };
   expediente.eventos.push(evento);
 
-  // Una notificacion que echa a andar un plazo mueve la etapa cuando la
-  // maquina de estados lo permite. Si no lo permite, el evento se guarda igual
-  // y la etapa se queda donde estaba: el expediente no se corrige solo.
-  if (evento.disparaPlazo !== null) {
-    const paso = cambiarEstado(expediente.estado, 'plazo_corriendo', {
-      fecha: evento.ocurridoEn,
-      eventoId: identificador('ev'),
-      nota: 'Lo movio el registro de una notificacion que dispara un plazo.',
-    });
-    if (paso.ok) {
-      expediente.estado = paso.estado;
-      expediente.eventos.push(paso.evento);
-    }
-  }
+  // Una notificacion que echa a andar un plazo mueve la etapa a "plazo
+  // corriendo", porque un plazo vivo en un expediente que dice estar en otra
+  // cosa es justo el silencio que hay que evitar. El movimiento lo autoriza la
+  // maquina de estados paso a paso: si no hay camino valido, la etapa se queda
+  // donde estaba y el evento se guarda igual. El expediente no salta etapas.
+  if (evento.disparaPlazo !== null) avanzarHasta(expediente, 'plazo_corriendo', evento.ocurridoEn);
 
   return { ok: true, valor: evento };
+}
+
+/**
+ * Camino mas corto entre dos etapas siguiendo solo transiciones declaradas
+ * validas. Nunca pasa por "concluido": cerrar un asunto es una decision, no un
+ * atajo. Devuelve una lista vacia cuando no hay camino.
+ */
+function caminoDeEstados(desde: EstadoExpediente, hacia: EstadoExpediente): EstadoExpediente[] {
+  if (desde === hacia) return [];
+  const previo = new Map<EstadoExpediente, EstadoExpediente>();
+  const vistos = new Set<EstadoExpediente>([desde]);
+  const cola: EstadoExpediente[] = [desde];
+
+  while (cola.length > 0) {
+    const actual = cola.shift() as EstadoExpediente;
+    for (const siguiente of transicionesDesde(actual)) {
+      if (vistos.has(siguiente)) continue;
+      if (siguiente === 'concluido' && siguiente !== hacia) continue;
+      vistos.add(siguiente);
+      previo.set(siguiente, actual);
+      if (siguiente === hacia) {
+        const camino: EstadoExpediente[] = [siguiente];
+        let cursor = siguiente;
+        while (cursor !== desde) {
+          cursor = previo.get(cursor) as EstadoExpediente;
+          if (cursor !== desde) camino.unshift(cursor);
+        }
+        return camino;
+      }
+      cola.push(siguiente);
+    }
+  }
+  return [];
+}
+
+function avanzarHasta(expediente: Expediente, hacia: EstadoExpediente, fecha: FechaISO): void {
+  for (const etapa of caminoDeEstados(expediente.estado, hacia)) {
+    const paso = cambiarEstado(expediente.estado, etapa, {
+      fecha,
+      eventoId: identificador('ev'),
+      nota: 'Lo movio el registro de una notificacion que echa a andar un plazo.',
+    });
+    if (!paso.ok) return;
+    expediente.estado = paso.estado;
+    expediente.eventos.push(paso.evento);
+  }
 }
 
 export interface CambioDeEstado {
