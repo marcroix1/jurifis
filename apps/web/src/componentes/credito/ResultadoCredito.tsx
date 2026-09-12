@@ -77,7 +77,11 @@ function BloqueExtincionVista({ bloque }: { bloque: BloqueExtincion }) {
           <dd className="text-sm text-texto">
             {bloque.diasNaturalesCorridos === null
               ? 'No se midió, falta la fecha de inicio'
-              : `${bloque.diasNaturalesCorridos} días naturales, cerca de ${bloque.aniosNaturalesCorridos} años`}
+              : `${bloque.diasNaturalesCorridos} días naturales${
+                  bloque.aniosNaturalesCorridos !== null && bloque.aniosNaturalesCorridos >= 1
+                    ? `, cerca de ${bloque.aniosNaturalesCorridos} ${bloque.aniosNaturalesCorridos === 1 ? 'año' : 'años'}`
+                    : ', menos de un año'
+                }`}
           </dd>
         </div>
         <div>

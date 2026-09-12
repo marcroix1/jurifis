@@ -1,13 +1,19 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 
-import { FechaInvalida } from '@jurifis/core';
-import {
+import { FechaInvalida, credito } from '@jurifis/core';
+
+const {
   EntradaCreditoInvalida, ImporteInvalido, TasaFueraDelCorpus, aCentavos, estimar,
-} from '@jurifis/core/src/credito/index.js';
-import type {
-  ActoExpediente, Constancia, EntradaCredito, MultaRegistrada, PagoRegistrado, TipoActo, TipoRecargo,
-} from '@jurifis/core/src/credito/index.js';
+} = credito;
+
+type ActoExpediente = credito.ActoExpediente;
+type Constancia = credito.Constancia;
+type EntradaCredito = credito.EntradaCredito;
+type MultaRegistrada = credito.MultaRegistrada;
+type PagoRegistrado = credito.PagoRegistrado;
+type TipoActo = credito.TipoActo;
+type TipoRecargo = credito.TipoRecargo;
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';

@@ -49,7 +49,7 @@ const FUNDAMENTO_IMPUTACION: Fundamento = {
   ordenamiento: 'Codigo Fiscal de la Federacion',
   articulo: '20',
   parrafo: 'penultimo',
-  publicacion: 'Texto vigente, ultima reforma DOF 09-04-2026',
+  publicacion: 'Texto vigente, ultima reforma publicada en el Diario Oficial de la Federacion el 9 de abril de 2026',
   archivo: 'CFF.md',
   linea: 2090,
 };
@@ -59,7 +59,7 @@ const FUNDAMENTO_NATURALEZA: Fundamento = {
   ordenamiento: 'Codigo Fiscal de la Federacion',
   articulo: '17-A',
   parrafo: 'cuarto',
-  publicacion: 'Texto vigente, ultima reforma DOF 09-04-2026',
+  publicacion: 'Texto vigente, ultima reforma publicada en el Diario Oficial de la Federacion el 9 de abril de 2026',
   archivo: 'CFF.md',
   linea: 1081,
 };
@@ -69,7 +69,7 @@ const FUNDAMENTO_MULTAS: Fundamento = {
   ordenamiento: 'Codigo Fiscal de la Federacion',
   articulo: '70',
   parrafo: 'segundo',
-  publicacion: 'Texto vigente, ultima reforma DOF 09-04-2026',
+  publicacion: 'Texto vigente, ultima reforma publicada en el Diario Oficial de la Federacion el 9 de abril de 2026',
   archivo: 'CFF.md',
   linea: 9860,
 };
@@ -79,7 +79,7 @@ const FUNDAMENTO_BASE_RECARGOS: Fundamento = {
   ordenamiento: 'Codigo Fiscal de la Federacion',
   articulo: '21',
   parrafo: 'segundo',
-  publicacion: 'Texto vigente, ultima reforma DOF 09-04-2026',
+  publicacion: 'Texto vigente, ultima reforma publicada en el Diario Oficial de la Federacion el 9 de abril de 2026',
   archivo: 'CFF.md',
   linea: 2265,
 };
@@ -258,7 +258,7 @@ export function estimarCredito(entrada: EntradaCredito, corpus: CorpusCredito): 
         ordenamiento: 'Codigo Fiscal de la Federacion',
         articulo: '17-A',
         parrafo: 'primero',
-        publicacion: 'Texto vigente, ultima reforma DOF 09-04-2026',
+        publicacion: 'Texto vigente, ultima reforma publicada en el Diario Oficial de la Federacion el 9 de abril de 2026',
         archivo: 'CFF.md',
         linea: 1065,
       },

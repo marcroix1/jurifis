@@ -1,8 +1,15 @@
-import type {
-  ActoConEfectoPosible, ActoExpediente, AnalisisExtincion, BloqueExtincion, DesgloseCredito,
-  EstimacionCredito, FactorActualizacion, MesDeRecargo, PasoTrazaCredito, PeriodoRecargos,
-} from '@jurifis/core/src/credito/index.js';
-import type { Fundamento } from '@jurifis/core';
+import type { Fundamento, credito } from '@jurifis/core';
+
+type ActoConEfectoPosible = credito.ActoConEfectoPosible;
+type ActoExpediente = credito.ActoExpediente;
+type AnalisisExtincion = credito.AnalisisExtincion;
+type BloqueExtincion = credito.BloqueExtincion;
+type DesgloseCredito = credito.DesgloseCredito;
+type EstimacionCredito = credito.EstimacionCredito;
+type FactorActualizacion = credito.FactorActualizacion;
+type MesDeRecargo = credito.MesDeRecargo;
+type PasoTrazaCredito = credito.PasoTrazaCredito;
+type PeriodoRecargos = credito.PeriodoRecargos;
 
 /**
  * Tipos de la interfaz de crédito. Se reexportan los del motor en lugar de redibujarlos:
