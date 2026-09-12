@@ -6,6 +6,9 @@ import { MarcaJurifis } from './MarcaJurifis';
 const ENLACES = [
   { href: '/plazos', texto: 'Plazos' },
   { href: '/diagnostico', texto: 'Diagnóstico' },
+  { href: '/jurisprudencia', texto: 'Jurisprudencia' },
+  { href: '/credito', texto: 'Crédito' },
+  { href: '/expedientes', texto: 'Expedientes' },
   { href: '/admin', texto: 'Panel' },
 ];
 

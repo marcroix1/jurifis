@@ -1,0 +1,44 @@
+{
+  "id": "inpc-sp1-cp154",
+  "nombre": "Indice Nacional de Precios al Consumidor, serie SP1 del cuadro CP154",
+  "serie": "SP1",
+  "cuadro": "CP154",
+  "base": "Segunda quincena de julio de 2018 igual a 100",
+  "emisorLegal": "Instituto Nacional de Estadistica y Geografia",
+  "publicacionQueSurteEfectos": "Diario Oficial de la Federacion",
+  "replicador": "Banco de Mexico",
+  "advertenciaDeFuente": "El indice lo calcula el Instituto Nacional de Estadistica y Geografia y la publicacion que surte efectos fiscales es la del Diario Oficial de la Federacion. Banco de Mexico solo replica la serie. Por eso cada valor tomado de Banco de Mexico se carga como nivel B: sirve para estimar y obliga a cotejar el numero contra la publicacion oficial antes de usarlo en un escrito.",
+  "consultadoEl": "2026-09-12",
+  "fundamento": {
+    "ordenamiento": "Codigo Fiscal de la Federacion",
+    "articulo": "20",
+    "parrafo": "segundo",
+    "publicacion": "Texto vigente, ultima reforma DOF 09-04-2026",
+    "archivo": "CFF.md",
+    "linea": 2038
+  },
+  "valores": [
+    {
+      "mes": "2026-06",
+      "valor": 145.131,
+      "nivelFuente": "B",
+      "fuente": "Banco de Mexico, Sistema de Informacion Economica, cuadro CP154, serie SP1, replica de la serie del Instituto Nacional de Estadistica y Geografia.",
+      "consultadoEl": "2026-09-12"
+    },
+    {
+      "mes": "2026-07",
+      "valor": 145.169,
+      "nivelFuente": "B",
+      "fuente": "Banco de Mexico, Sistema de Informacion Economica, cuadro CP154, serie SP1, replica de la serie del Instituto Nacional de Estadistica y Geografia.",
+      "consultadoEl": "2026-09-12"
+    },
+    {
+      "mes": "2026-08",
+      "valor": 145.462,
+      "nivelFuente": "B",
+      "fuente": "Banco de Mexico, Sistema de Informacion Economica, cuadro CP154, serie SP1, replica de la serie del Instituto Nacional de Estadistica y Geografia.",
+      "consultadoEl": "2026-09-12"
+    }
+  ],
+  "huecosDeclarados": "La serie cargada solo tiene tres meses. Todo periodo que necesite cualquier otro mes se devuelve como insuficiente, con el mes faltante escrito por su nombre. No se interpola, no se proyecta y no se completa con ningun valor que no venga verificado."
+}

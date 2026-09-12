@@ -42,3 +42,5 @@ export function calcular(entrada: EntradaComputo): ResultadoComputo {
     throw e;
   }
 }
+export * as jurisprudencia from './jurisprudencia/index.js';
+export * as credito from './credito/index.js';

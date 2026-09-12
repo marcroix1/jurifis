@@ -1,0 +1,40 @@
+{
+  "esquema": 1,
+  "version": "0.0.0",
+  "actualizadoEl": "2026-09-12",
+  "origenes": [
+    {
+      "clave": "scjn",
+      "nombre": "Suprema Corte de Justicia de la Nación",
+      "aporta": "Jurisprudencia y tesis aisladas del Pleno y de las Salas, con su clave de control, su época y su registro digital.",
+      "direccion": null
+    },
+    {
+      "clave": "semanario",
+      "nombre": "Semanario Judicial de la Federación",
+      "aporta": "Publicación oficial de la tesis. Es la fuente que fija el rubro, el texto, los precedentes y el registro digital con los que se cita.",
+      "direccion": null
+    },
+    {
+      "clave": "tfja",
+      "nombre": "Tribunal Federal de Justicia Administrativa",
+      "aporta": "Jurisprudencia, precedentes y criterios aislados de la Sala Superior y de las Salas Regionales, publicados en la revista del propio Tribunal.",
+      "direccion": null
+    }
+  ],
+  "requisitosDeCarga": [
+    "Descargar el criterio del origen oficial y guardar el documento con la fecha en que se consultó. Nada entra desde una página que reproduzca el texto de segunda mano.",
+    "Capturar el tipo de criterio tal como lo declara el origen. El acervo no deduce si algo es jurisprudencia a partir del rubro, de la clave o del órgano que la emitió.",
+    "Transcribir el rubro y el texto íntegros, sin resumir y sin corregir la redacción del original.",
+    "Registrar la clave de control, el órgano, la época, la materia, la fecha de publicación y los precedentes que el documento traiga, y dejar en nulo lo que no traiga.",
+    "Pasar la revisión humana: una persona lee el criterio contra el documento oficial, firma con su nombre y con la fecha, y su firma queda atada a la huella del texto revisado.",
+    "Publicar con número de versión. Cualquier corrección posterior sube la versión y exige una revisión nueva."
+  ],
+  "notas": [
+    "A la fecha no hay ningún criterio cargado. El arreglo de criterios está vacío a propósito y el buscador lo declara en lugar de rellenar el hueco.",
+    "El registro digital es la llave de cita: el guardián de citas bloquea cualquier escrito que invoque un registro que no esté en este archivo.",
+    "La búsqueda por significado con vectores está declarada en el diseño y todavía no tiene motor. Mientras no lo tenga, el buscador lo dice y no lo simula.",
+    "Este archivo es el espejo en disco de la tabla jurisprudence de la base de datos. Los nombres de campo y la enumeración de tipos son los mismos."
+  ],
+  "criterios": []
+}

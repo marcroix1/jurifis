@@ -1,0 +1,140 @@
+{
+  "id": "prescripcion-caducidad-cff",
+  "nombre": "Prescripcion del credito fiscal y caducidad de las facultades de comprobacion",
+  "nivelFuente": "A",
+  "verificadoEl": "2026-09-12",
+  "prescripcion": {
+    "descripcion": "Extincion del credito fiscal por el transcurso del tiempo.",
+    "plazoAnios": 5,
+    "inicio": "La fecha en que el pago pudo ser legalmente exigido.",
+    "topeAnios": 10,
+    "notaTope": "Ni siquiera interrumpido puede exceder de diez anios contados desde que el credito pudo ser legalmente exigido. En ese plazo no se computan los periodos en que estuvo suspendido.",
+    "fundamento": {
+      "ordenamiento": "Codigo Fiscal de la Federacion",
+      "articulo": "146",
+      "parrafo": "primero",
+      "publicacion": "Texto vigente, ultima reforma DOF 09-04-2026",
+      "archivo": "CFF.md",
+      "linea": 15287
+    },
+    "fundamentoInterrupcion": {
+      "ordenamiento": "Codigo Fiscal de la Federacion",
+      "articulo": "146",
+      "parrafo": "segundo",
+      "publicacion": "Texto vigente, ultima reforma DOF 09-04-2026",
+      "archivo": "CFF.md",
+      "linea": 15291
+    },
+    "fundamentoTope": {
+      "ordenamiento": "Codigo Fiscal de la Federacion",
+      "articulo": "146",
+      "parrafo": "quinto",
+      "publicacion": "Texto vigente, ultima reforma DOF 09-04-2026",
+      "archivo": "CFF.md",
+      "linea": 15305
+    },
+    "interrumpenSiSeAcreditan": [
+      {
+        "clave": "gestion_de_cobro_notificada",
+        "descripcion": "Cada gestion de cobro que el acreedor notifique o haga saber al deudor.",
+        "requiereVerificar": [
+          "Que exista constancia de la notificacion o de que se hizo saber al deudor.",
+          "Que la diligencia se haya entendido con el deudor o con quien legalmente lo represente.",
+          "Que el acto conste en el expediente con fecha cierta."
+        ]
+      },
+      {
+        "clave": "actuacion_dentro_del_procedimiento_administrativo_de_ejecucion",
+        "descripcion": "Cualquier actuacion de la autoridad dentro del procedimiento administrativo de ejecucion, siempre que se haga del conocimiento del deudor.",
+        "requiereVerificar": [
+          "Que la actuacion se haya hecho del conocimiento del deudor.",
+          "Que la actuacion sea del procedimiento administrativo de ejecucion y no un acto preparatorio interno."
+        ]
+      },
+      {
+        "clave": "reconocimiento_expreso_o_tacito",
+        "descripcion": "El reconocimiento expreso o tacito del deudor respecto de la existencia del credito.",
+        "requiereVerificar": [
+          "Que el acto del deudor sea inequivoco respecto del mismo credito.",
+          "Que el reconocimiento no se haya hecho bajo protesta o al amparo de un medio de defensa."
+        ]
+      }
+    ],
+    "suspendenSiSeAcreditan": [
+      {
+        "clave": "suspension_del_procedimiento_administrativo_de_ejecucion",
+        "descripcion": "La suspension del procedimiento administrativo de ejecucion en los terminos del articulo 144 del Codigo Fiscal de la Federacion suspende tambien el plazo de la prescripcion.",
+        "fundamento": {
+          "ordenamiento": "Codigo Fiscal de la Federacion",
+          "articulo": "146",
+          "parrafo": "tercero",
+          "publicacion": "Texto vigente, ultima reforma DOF 09-04-2026",
+          "archivo": "CFF.md",
+          "linea": 15298
+        },
+        "requiereVerificar": [
+          "Que la suspension se haya decretado en los terminos del articulo 144 del Codigo Fiscal de la Federacion.",
+          "La fecha en que la suspension empezo y la fecha en que termino."
+        ]
+      },
+      {
+        "clave": "domicilio_fiscal_desocupado_o_incorrecto",
+        "descripcion": "Que el contribuyente hubiera desocupado su domicilio fiscal sin presentar el aviso de cambio, o hubiere senalado de manera incorrecta su domicilio fiscal.",
+        "fundamento": {
+          "ordenamiento": "Codigo Fiscal de la Federacion",
+          "articulo": "146",
+          "parrafo": "cuarto",
+          "publicacion": "Texto vigente, ultima reforma DOF 09-04-2026",
+          "archivo": "CFF.md",
+          "linea": 15301
+        },
+        "requiereVerificar": [
+          "Que conste la desocupacion del domicilio o el senalamiento incorrecto.",
+          "Que la autoridad lo haya hecho constar y desde que fecha."
+        ]
+      }
+    ]
+  },
+  "caducidad": {
+    "descripcion": "Extincion de las facultades de las autoridades fiscales para determinar contribuciones o aprovechamientos omitidos y sus accesorios, y para imponer sanciones.",
+    "plazoAnios": 5,
+    "plazoAmpliadoAnios": 10,
+    "notaPlazoAmpliado": "El plazo es de diez anios cuando el contribuyente no presento su solicitud en el Registro Federal de Contribuyentes, no lleva contabilidad o no la conserva, o por los ejercicios en que no presento declaracion del ejercicio estando obligado.",
+    "sujetaAInterrupcion": false,
+    "notaInterrupcion": "El plazo de caducidad no esta sujeto a interrupcion. Solo se suspende en los casos que el propio articulo enumera.",
+    "fundamento": {
+      "ordenamiento": "Codigo Fiscal de la Federacion",
+      "articulo": "67",
+      "parrafo": "primero",
+      "publicacion": "Texto vigente, ultima reforma DOF 09-04-2026",
+      "archivo": "CFF.md",
+      "linea": 9188
+    },
+    "fundamentoSuspension": {
+      "ordenamiento": "Codigo Fiscal de la Federacion",
+      "articulo": "67",
+      "parrafo": "sexto",
+      "publicacion": "Texto vigente, ultima reforma DOF 09-04-2026",
+      "archivo": "CFF.md",
+      "linea": 9248
+    },
+    "suspendenSiSeAcreditan": [
+      {
+        "clave": "ejercicio_de_facultades_de_comprobacion",
+        "descripcion": "El ejercicio de las facultades de comprobacion a que se refieren las fracciones II, III, IV y IX del articulo 42 del Codigo Fiscal de la Federacion.",
+        "requiereVerificar": [
+          "Que la facultad ejercida sea de las fracciones II, III, IV o IX del articulo 42.",
+          "La fecha de inicio y la fecha de conclusion del ejercicio de la facultad."
+        ]
+      },
+      {
+        "clave": "recurso_administrativo_o_juicio",
+        "descripcion": "La interposicion de un recurso administrativo o de un juicio.",
+        "requiereVerificar": [
+          "La fecha de presentacion del medio de defensa y la fecha en que quedo firme la resolucion que le puso fin."
+        ]
+      }
+    ],
+    "notaCatalogoIncompleto": "El sexto parrafo del articulo 67 enumera mas supuestos de suspension que los cargados aqui. Antes de sostener una caducidad hay que leer el precepto integro contra el expediente."
+  }
+}

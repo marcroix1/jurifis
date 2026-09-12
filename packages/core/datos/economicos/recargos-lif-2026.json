@@ -1,0 +1,66 @@
+{
+  "ejercicio": 2026,
+  "nombre": "Tasas de recargos del ejercicio fiscal 2026",
+  "vigenteDesde": "2026-01-01",
+  "vigenteHasta": "2026-12-31",
+  "nivelFuente": "A",
+  "verificadoEl": "2026-09-12",
+  "nota": "Texto verificado en la conversion a Markdown del mismo archivo del acervo, LIF_2026.md, lineas 550 a 562. Las tasas de la fraccion II incluyen la actualizacion, segun el parrafo final del propio articulo 11.",
+  "tasasMensuales": {
+    "prorroga": 1.38,
+    "parcialidadesHastaDoceMeses": 1.42,
+    "parcialidadesDeMasDeDoceYHastaVeinticuatroMeses": 1.63,
+    "parcialidadesSuperioresAVeinticuatroMesesYPagoDiferido": 1.97
+  },
+  "fundamento": {
+    "ordenamiento": "Ley de Ingresos de la Federacion para el Ejercicio Fiscal de 2026",
+    "articulo": "11",
+    "publicacion": "Nueva Ley publicada en el Diario Oficial de la Federacion el 7 de noviembre de 2025, vigente a partir del 1 de enero de 2026",
+    "archivo": "LIF_2026.pdf"
+  },
+  "fundamentoPorTasa": {
+    "prorroga": {
+      "ordenamiento": "Ley de Ingresos de la Federacion para el Ejercicio Fiscal de 2026",
+      "articulo": "11",
+      "fraccion": "I",
+      "publicacion": "Nueva Ley publicada en el Diario Oficial de la Federacion el 7 de noviembre de 2025, vigente a partir del 1 de enero de 2026",
+      "archivo": "LIF_2026.pdf"
+    },
+    "parcialidadesHastaDoceMeses": {
+      "ordenamiento": "Ley de Ingresos de la Federacion para el Ejercicio Fiscal de 2026",
+      "articulo": "11",
+      "fraccion": "II",
+      "inciso": "1",
+      "publicacion": "Nueva Ley publicada en el Diario Oficial de la Federacion el 7 de noviembre de 2025, vigente a partir del 1 de enero de 2026",
+      "archivo": "LIF_2026.pdf"
+    },
+    "parcialidadesDeMasDeDoceYHastaVeinticuatroMeses": {
+      "ordenamiento": "Ley de Ingresos de la Federacion para el Ejercicio Fiscal de 2026",
+      "articulo": "11",
+      "fraccion": "II",
+      "inciso": "2",
+      "publicacion": "Nueva Ley publicada en el Diario Oficial de la Federacion el 7 de noviembre de 2025, vigente a partir del 1 de enero de 2026",
+      "archivo": "LIF_2026.pdf"
+    },
+    "parcialidadesSuperioresAVeinticuatroMesesYPagoDiferido": {
+      "ordenamiento": "Ley de Ingresos de la Federacion para el Ejercicio Fiscal de 2026",
+      "articulo": "11",
+      "fraccion": "II",
+      "inciso": "3",
+      "publicacion": "Nueva Ley publicada en el Diario Oficial de la Federacion el 7 de noviembre de 2025, vigente a partir del 1 de enero de 2026",
+      "archivo": "LIF_2026.pdf"
+    }
+  },
+  "mora": {
+    "explicacion": "La tasa de recargos por mora no aparece escrita en la Ley de Ingresos. Se deriva de la tasa de prorroga que fija el Congreso, incrementada en cincuenta por ciento y ajustada a la centesima. Aqui no se captura la cifra: el motor la calcula con la formula del articulo 21 del Codigo Fiscal de la Federacion cada vez que la necesita.",
+    "tasaBase": "prorroga",
+    "fundamento": {
+      "ordenamiento": "Codigo Fiscal de la Federacion",
+      "articulo": "21",
+      "parrafo": "primero",
+      "publicacion": "Texto vigente, ultima reforma DOF 09-04-2026",
+      "archivo": "CFF.md",
+      "linea": 2252
+    }
+  }
+}
