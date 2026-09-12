@@ -1,0 +1,53 @@
+{
+  "id": "cff-12-2026",
+  "nombre": "Dias inhabiles del articulo 12 del Codigo Fiscal de la Federacion, ejercicio 2026",
+  "aniosCubiertos": [
+    2026
+  ],
+  "nivelFuente": "A",
+  "fuente": "Codigo Fiscal de la Federacion, articulo 12 primer parrafo, texto vigente con ultima reforma DOF 09-04-2026, archivo CFF.md lineas 419 a 423.",
+  "consultadoEl": "2026-09-12",
+  "finesDeSemanaInhabiles": true,
+  "dias": [
+    {
+      "fecha": "2026-01-01",
+      "motivo": "Cola del segundo periodo general de vacaciones de 2025 | 1o. de enero",
+      "fundamento": "RMF 2026 regla 2.1.6 fraccion I, DOF 28-12-2025 | CFF articulo 12 primer parrafo, texto vigente DOF 09-04-2026"
+    },
+    {
+      "fecha": "2026-02-02",
+      "motivo": "Primer lunes de febrero, conmemoracion del 5 de febrero",
+      "fundamento": "CFF articulo 12 primer parrafo, texto vigente DOF 09-04-2026"
+    },
+    {
+      "fecha": "2026-03-16",
+      "motivo": "Tercer lunes de marzo, conmemoracion del 21 de marzo",
+      "fundamento": "CFF articulo 12 primer parrafo, texto vigente DOF 09-04-2026"
+    },
+    {
+      "fecha": "2026-05-01",
+      "motivo": "1o. de mayo",
+      "fundamento": "CFF articulo 12 primer parrafo, texto vigente DOF 09-04-2026"
+    },
+    {
+      "fecha": "2026-05-05",
+      "motivo": "5 de mayo",
+      "fundamento": "CFF articulo 12 primer parrafo, texto vigente DOF 09-04-2026"
+    },
+    {
+      "fecha": "2026-09-16",
+      "motivo": "16 de septiembre",
+      "fundamento": "CFF articulo 12 primer parrafo, texto vigente DOF 09-04-2026"
+    },
+    {
+      "fecha": "2026-11-16",
+      "motivo": "Tercer lunes de noviembre, conmemoracion del 20 de noviembre",
+      "fundamento": "CFF articulo 12 primer parrafo, texto vigente DOF 09-04-2026"
+    },
+    {
+      "fecha": "2026-12-25",
+      "motivo": "25 de diciembre",
+      "fundamento": "CFF articulo 12 primer parrafo, texto vigente DOF 09-04-2026"
+    }
+  ]
+}

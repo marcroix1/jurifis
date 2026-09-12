@@ -1,0 +1,56 @@
+{
+  "inicio": {
+    "primerDia": "siguiente_natural"
+  },
+  "prorrogaSiVenceInhabil": true,
+  "incluyeDiaVencimiento": true,
+  "vigenteHasta": null,
+  "nivelFuente": "A",
+  "verificadoEl": "2026-09-12",
+  "id": "ley-aduanera-150",
+  "procedimiento": "pama_pruebas_y_alegatos",
+  "descripcion": "Procedimiento administrativo en materia aduanera: ofrecer pruebas y formular alegatos",
+  "plazo": {
+    "cantidad": 10,
+    "unidad": "dias_habiles"
+  },
+  "surtimiento": [
+    {
+      "forma": "personal",
+      "desplazamiento": 1,
+      "unidad": "dias_habiles",
+      "fundamento": {
+        "ordenamiento": "Codigo Fiscal de la Federacion",
+        "articulo": "135",
+        "parrafo": "primero",
+        "publicacion": "Texto vigente, ultima reforma DOF 09-04-2026",
+        "archivo": "CFF.md",
+        "linea": 14647
+      }
+    },
+    {
+      "forma": "oficio",
+      "desplazamiento": 1,
+      "unidad": "dias_habiles",
+      "fundamento": {
+        "ordenamiento": "Codigo Fiscal de la Federacion",
+        "articulo": "135",
+        "parrafo": "primero",
+        "publicacion": "Texto vigente, ultima reforma DOF 09-04-2026",
+        "archivo": "CFF.md",
+        "linea": 14647
+      }
+    }
+  ],
+  "calendarios": [
+    "sat-2026"
+  ],
+  "fundamento": {
+    "ordenamiento": "Ley Aduanera",
+    "articulo": "150",
+    "publicacion": "Texto vigente, ultima reforma DOF 19-11-2025",
+    "archivo": "LADUANERA.md",
+    "linea": 8278
+  },
+  "vigenteDesde": "1996-04-01"
+}

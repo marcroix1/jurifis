@@ -1,0 +1,67 @@
+{
+  "inicio": {
+    "primerDia": "siguiente_natural"
+  },
+  "prorrogaSiVenceInhabil": true,
+  "incluyeDiaVencimiento": true,
+  "vigenteHasta": null,
+  "nivelFuente": "B",
+  "verificadoEl": "2026-09-12",
+  "id": "rri-6",
+  "procedimiento": "recurso_de_inconformidad_imss",
+  "descripcion": "Recurso de inconformidad ante el Instituto Mexicano del Seguro Social",
+  "plazo": {
+    "cantidad": 15,
+    "unidad": "dias_habiles"
+  },
+  "surtimiento": [
+    {
+      "forma": "personal",
+      "desplazamiento": 1,
+      "unidad": "dias_habiles",
+      "fundamento": {
+        "ordenamiento": "Reglamento del Recurso de Inconformidad",
+        "articulo": "11",
+        "publicacion": "Segun el acervo del despacho, sin reformas posteriores a noviembre de 2000",
+        "archivo": "inconformidad-imss.md"
+      }
+    },
+    {
+      "forma": "oficio",
+      "desplazamiento": 1,
+      "unidad": "dias_habiles",
+      "fundamento": {
+        "ordenamiento": "Reglamento del Recurso de Inconformidad",
+        "articulo": "11",
+        "publicacion": "Segun el acervo del despacho, sin reformas posteriores a noviembre de 2000",
+        "archivo": "inconformidad-imss.md"
+      }
+    },
+    {
+      "forma": "lista_o_estrados",
+      "desplazamiento": 5,
+      "unidad": "dias_habiles",
+      "fundamento": {
+        "ordenamiento": "Reglamento del Recurso de Inconformidad",
+        "articulo": "11",
+        "publicacion": "Segun el acervo del despacho, sin reformas posteriores a noviembre de 2000",
+        "archivo": "inconformidad-imss.md"
+      }
+    }
+  ],
+  "calendarios": [
+    "cff-12-2026"
+  ],
+  "fundamento": {
+    "ordenamiento": "Reglamento del Recurso de Inconformidad",
+    "articulo": "6",
+    "publicacion": "Segun el acervo del despacho",
+    "archivo": "inconformidad-imss.md"
+  },
+  "vigenteDesde": "2000-11-28",
+  "vigenciaDeclaradaPor": {
+    "persona": "Marco, abogado responsable, NOVA LEGAL S.C.",
+    "fecha": "2026-09-12",
+    "nota": "Declara que el documento del acervo es la ultima version existente, que no ha habido reformas posteriores, y que el Instituto no tiene vacaciones generales y opera con los dias inhabiles del articulo 12 del Codigo Fiscal de la Federacion."
+  }
+}

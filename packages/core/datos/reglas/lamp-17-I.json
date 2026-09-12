@@ -1,0 +1,70 @@
+{
+  "inicio": {
+    "primerDia": "siguiente_natural"
+  },
+  "prorrogaSiVenceInhabil": true,
+  "incluyeDiaVencimiento": true,
+  "vigenteHasta": null,
+  "nivelFuente": "A",
+  "verificadoEl": "2026-09-12",
+  "id": "lamp-17-I",
+  "procedimiento": "amparo_indirecto_norma_autoaplicativa",
+  "descripcion": "Demanda de amparo contra norma general autoaplicativa o procedimiento de extradicion",
+  "plazo": {
+    "cantidad": 30,
+    "unidad": "dias_habiles"
+  },
+  "surtimiento": [
+    {
+      "forma": "lista_o_estrados",
+      "desplazamiento": 1,
+      "unidad": "dias_habiles",
+      "fundamento": {
+        "ordenamiento": "Ley de Amparo",
+        "articulo": "31",
+        "fraccion": "II",
+        "publicacion": "Texto vigente, ultima reforma DOF 16-10-2025",
+        "archivo": "LAmp.md",
+        "linea": 1133
+      }
+    },
+    {
+      "forma": "personal",
+      "desplazamiento": 1,
+      "unidad": "dias_habiles",
+      "fundamento": {
+        "ordenamiento": "Ley de Amparo",
+        "articulo": "31",
+        "fraccion": "II",
+        "publicacion": "Texto vigente, ultima reforma DOF 16-10-2025",
+        "archivo": "LAmp.md",
+        "linea": 1133
+      }
+    },
+    {
+      "forma": "acto_autoaplicativo",
+      "desplazamiento": 0,
+      "unidad": "dias_habiles",
+      "fundamento": {
+        "ordenamiento": "Ley de Amparo",
+        "articulo": "31",
+        "fraccion": "II",
+        "publicacion": "Texto vigente, ultima reforma DOF 16-10-2025",
+        "archivo": "LAmp.md",
+        "linea": 1133
+      }
+    }
+  ],
+  "calendarios": [
+    "amparo-19-2026"
+  ],
+  "fundamento": {
+    "ordenamiento": "Ley de Amparo",
+    "articulo": "17",
+    "fraccion": "I",
+    "publicacion": "Texto vigente, ultima reforma DOF 16-10-2025",
+    "archivo": "LAmp.md",
+    "linea": 570
+  },
+  "vigenteDesde": "2013-04-03"
+}

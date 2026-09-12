@@ -1,0 +1,57 @@
+{
+  "inicio": {
+    "primerDia": "siguiente_natural"
+  },
+  "prorrogaSiVenceInhabil": true,
+  "incluyeDiaVencimiento": true,
+  "vigenteHasta": null,
+  "nivelFuente": "A",
+  "verificadoEl": "2026-09-12",
+  "id": "lamp-98",
+  "procedimiento": "amparo_recurso_de_queja",
+  "descripcion": "Recurso de queja en el juicio de amparo, plazo generico",
+  "plazo": {
+    "cantidad": 5,
+    "unidad": "dias_habiles"
+  },
+  "surtimiento": [
+    {
+      "forma": "lista_o_estrados",
+      "desplazamiento": 1,
+      "unidad": "dias_habiles",
+      "fundamento": {
+        "ordenamiento": "Ley de Amparo",
+        "articulo": "31",
+        "fraccion": "II",
+        "publicacion": "Texto vigente, ultima reforma DOF 16-10-2025",
+        "archivo": "LAmp.md",
+        "linea": 1133
+      }
+    },
+    {
+      "forma": "personal",
+      "desplazamiento": 1,
+      "unidad": "dias_habiles",
+      "fundamento": {
+        "ordenamiento": "Ley de Amparo",
+        "articulo": "31",
+        "fraccion": "II",
+        "publicacion": "Texto vigente, ultima reforma DOF 16-10-2025",
+        "archivo": "LAmp.md",
+        "linea": 1133
+      }
+    }
+  ],
+  "calendarios": [
+    "amparo-19-2026"
+  ],
+  "fundamento": {
+    "ordenamiento": "Ley de Amparo",
+    "articulo": "98",
+    "parrafo": "primero",
+    "publicacion": "Texto vigente, ultima reforma DOF 16-10-2025",
+    "archivo": "LAmp.md",
+    "linea": 2732
+  },
+  "vigenteDesde": "2013-04-03"
+}

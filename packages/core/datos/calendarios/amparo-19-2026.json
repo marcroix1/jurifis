@@ -1,0 +1,58 @@
+{
+  "id": "amparo-19-2026",
+  "nombre": "Dias inhabiles del juicio de amparo 2026",
+  "aniosCubiertos": [
+    2026
+  ],
+  "nivelFuente": "A",
+  "fuente": "Ley de Amparo, articulo 19, texto vigente con ultima reforma DOF 16-10-2025, archivo LAmp.md lineas 609 a 613. El propio articulo agrega los dias en que se suspendan las labores en el organo jurisdiccional donde se tramite el juicio, y aquellos en que no pueda funcionar por fuerza mayor. Esos no son catalogo: se registran como eventos del expediente, porque dependen del organo concreto.",
+  "consultadoEl": "2026-09-12",
+  "finesDeSemanaInhabiles": true,
+  "dias": [
+    {
+      "fecha": "2026-01-01",
+      "motivo": "uno de enero",
+      "fundamento": "Ley de Amparo articulo 19"
+    },
+    {
+      "fecha": "2026-02-05",
+      "motivo": "cinco de febrero",
+      "fundamento": "Ley de Amparo articulo 19"
+    },
+    {
+      "fecha": "2026-05-01",
+      "motivo": "uno de mayo",
+      "fundamento": "Ley de Amparo articulo 19"
+    },
+    {
+      "fecha": "2026-05-05",
+      "motivo": "cinco de mayo",
+      "fundamento": "Ley de Amparo articulo 19"
+    },
+    {
+      "fecha": "2026-09-14",
+      "motivo": "catorce de septiembre",
+      "fundamento": "Ley de Amparo articulo 19"
+    },
+    {
+      "fecha": "2026-09-16",
+      "motivo": "dieciseis de septiembre",
+      "fundamento": "Ley de Amparo articulo 19"
+    },
+    {
+      "fecha": "2026-10-12",
+      "motivo": "doce de octubre",
+      "fundamento": "Ley de Amparo articulo 19"
+    },
+    {
+      "fecha": "2026-11-20",
+      "motivo": "veinte de noviembre",
+      "fundamento": "Ley de Amparo articulo 19"
+    },
+    {
+      "fecha": "2026-12-25",
+      "motivo": "veinticinco de diciembre",
+      "fundamento": "Ley de Amparo articulo 19"
+    }
+  ]
+}

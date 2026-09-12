@@ -1,0 +1,56 @@
+{
+  "inicio": {
+    "primerDia": "siguiente_natural"
+  },
+  "prorrogaSiVenceInhabil": true,
+  "incluyeDiaVencimiento": true,
+  "vigenteHasta": null,
+  "nivelFuente": "A",
+  "verificadoEl": "2026-09-12",
+  "id": "lfpa-85",
+  "procedimiento": "recurso_de_revision_administrativo",
+  "descripcion": "Recurso de revision de la Ley Federal de Procedimiento Administrativo",
+  "plazo": {
+    "cantidad": 15,
+    "unidad": "dias_habiles"
+  },
+  "surtimiento": [
+    {
+      "forma": "personal",
+      "desplazamiento": 0,
+      "unidad": "dias_naturales",
+      "fundamento": {
+        "ordenamiento": "Ley Federal de Procedimiento Administrativo",
+        "articulo": "38",
+        "parrafo": "primero",
+        "publicacion": "Texto vigente, ultima reforma DOF 14-11-2025",
+        "archivo": "LFPA.md",
+        "linea": 692
+      }
+    },
+    {
+      "forma": "correo_certificado",
+      "desplazamiento": 0,
+      "unidad": "dias_naturales",
+      "fundamento": {
+        "ordenamiento": "Ley Federal de Procedimiento Administrativo",
+        "articulo": "38",
+        "parrafo": "primero",
+        "publicacion": "Texto vigente, ultima reforma DOF 14-11-2025",
+        "archivo": "LFPA.md",
+        "linea": 692
+      }
+    }
+  ],
+  "calendarios": [
+    "lfpa-28-2026"
+  ],
+  "fundamento": {
+    "ordenamiento": "Ley Federal de Procedimiento Administrativo",
+    "articulo": "85",
+    "publicacion": "Texto vigente, ultima reforma DOF 14-11-2025",
+    "archivo": "LFPA.md",
+    "linea": 1438
+  },
+  "vigenteDesde": "1994-08-04"
+}

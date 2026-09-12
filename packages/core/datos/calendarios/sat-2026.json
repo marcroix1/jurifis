@@ -1,0 +1,125 @@
+{
+  "id": "sat-2026",
+  "nombre": "Dias inhabiles de las autoridades fiscales federales 2026",
+  "aniosCubiertos": [
+    2026
+  ],
+  "nivelFuente": "A",
+  "fuente": "Resolucion Miscelanea Fiscal 2026 regla 2.1.6 (DOF 28-12-2025), reformada por la Primera Resolucion de Modificaciones (DOF 09-07-2026), mas el articulo 12 del Codigo Fiscal de la Federacion (DOF 09-04-2026).",
+  "consultadoEl": "2026-09-12",
+  "finesDeSemanaInhabiles": true,
+  "dias": [
+    {
+      "fecha": "2026-01-01",
+      "motivo": "Cola del segundo periodo general de vacaciones de 2025 | 1o. de enero",
+      "fundamento": "RMF 2026 regla 2.1.6 fraccion I, DOF 28-12-2025 | CFF articulo 12 primer parrafo, texto vigente DOF 09-04-2026"
+    },
+    {
+      "fecha": "2026-01-02",
+      "motivo": "Cola del segundo periodo general de vacaciones de 2025",
+      "fundamento": "RMF 2026 regla 2.1.6 fraccion I, DOF 28-12-2025"
+    },
+    {
+      "fecha": "2026-02-02",
+      "motivo": "Primer lunes de febrero, conmemoracion del 5 de febrero",
+      "fundamento": "CFF articulo 12 primer parrafo, texto vigente DOF 09-04-2026"
+    },
+    {
+      "fecha": "2026-03-16",
+      "motivo": "Tercer lunes de marzo, conmemoracion del 21 de marzo",
+      "fundamento": "CFF articulo 12 primer parrafo, texto vigente DOF 09-04-2026"
+    },
+    {
+      "fecha": "2026-04-02",
+      "motivo": "Dia inhabil para el SAT",
+      "fundamento": "RMF 2026 regla 2.1.6 fraccion II, DOF 28-12-2025"
+    },
+    {
+      "fecha": "2026-04-03",
+      "motivo": "Dia inhabil para el SAT",
+      "fundamento": "RMF 2026 regla 2.1.6 fraccion II, DOF 28-12-2025"
+    },
+    {
+      "fecha": "2026-05-01",
+      "motivo": "1o. de mayo",
+      "fundamento": "CFF articulo 12 primer parrafo, texto vigente DOF 09-04-2026"
+    },
+    {
+      "fecha": "2026-05-05",
+      "motivo": "5 de mayo",
+      "fundamento": "CFF articulo 12 primer parrafo, texto vigente DOF 09-04-2026"
+    },
+    {
+      "fecha": "2026-07-20",
+      "motivo": "Primer periodo general de vacaciones de 2026",
+      "fundamento": "RMF 2026 regla 2.1.6 fraccion III, adicionada por 1aRM DOF 09-07-2026"
+    },
+    {
+      "fecha": "2026-07-21",
+      "motivo": "Primer periodo general de vacaciones de 2026",
+      "fundamento": "RMF 2026 regla 2.1.6 fraccion III, adicionada por 1aRM DOF 09-07-2026"
+    },
+    {
+      "fecha": "2026-07-22",
+      "motivo": "Primer periodo general de vacaciones de 2026",
+      "fundamento": "RMF 2026 regla 2.1.6 fraccion III, adicionada por 1aRM DOF 09-07-2026"
+    },
+    {
+      "fecha": "2026-07-23",
+      "motivo": "Primer periodo general de vacaciones de 2026",
+      "fundamento": "RMF 2026 regla 2.1.6 fraccion III, adicionada por 1aRM DOF 09-07-2026"
+    },
+    {
+      "fecha": "2026-07-24",
+      "motivo": "Primer periodo general de vacaciones de 2026",
+      "fundamento": "RMF 2026 regla 2.1.6 fraccion III, adicionada por 1aRM DOF 09-07-2026"
+    },
+    {
+      "fecha": "2026-07-27",
+      "motivo": "Primer periodo general de vacaciones de 2026",
+      "fundamento": "RMF 2026 regla 2.1.6 fraccion III, adicionada por 1aRM DOF 09-07-2026"
+    },
+    {
+      "fecha": "2026-07-28",
+      "motivo": "Primer periodo general de vacaciones de 2026",
+      "fundamento": "RMF 2026 regla 2.1.6 fraccion III, adicionada por 1aRM DOF 09-07-2026"
+    },
+    {
+      "fecha": "2026-07-29",
+      "motivo": "Primer periodo general de vacaciones de 2026",
+      "fundamento": "RMF 2026 regla 2.1.6 fraccion III, adicionada por 1aRM DOF 09-07-2026"
+    },
+    {
+      "fecha": "2026-07-30",
+      "motivo": "Primer periodo general de vacaciones de 2026",
+      "fundamento": "RMF 2026 regla 2.1.6 fraccion III, adicionada por 1aRM DOF 09-07-2026"
+    },
+    {
+      "fecha": "2026-07-31",
+      "motivo": "Primer periodo general de vacaciones de 2026",
+      "fundamento": "RMF 2026 regla 2.1.6 fraccion III, adicionada por 1aRM DOF 09-07-2026"
+    },
+    {
+      "fecha": "2026-09-16",
+      "motivo": "16 de septiembre",
+      "fundamento": "CFF articulo 12 primer parrafo, texto vigente DOF 09-04-2026"
+    },
+    {
+      "fecha": "2026-11-16",
+      "motivo": "Tercer lunes de noviembre, conmemoracion del 20 de noviembre",
+      "fundamento": "CFF articulo 12 primer parrafo, texto vigente DOF 09-04-2026"
+    },
+    {
+      "fecha": "2026-12-25",
+      "motivo": "25 de diciembre",
+      "fundamento": "CFF articulo 12 primer parrafo, texto vigente DOF 09-04-2026"
+    }
+  ],
+  "huecos": [
+    {
+      "descripcion": "El segundo periodo general de vacaciones del Servicio de Administracion Tributaria para 2026 no ha sido publicado al 12 de septiembre de 2026. Se revisaron la Resolucion Miscelanea original, la Primera Resolucion de Modificaciones, el compilado oficial y las once versiones anticipadas de la Segunda Resolucion.",
+      "desde": "2026-12-01",
+      "hasta": "2026-12-31"
+    }
+  ]
+}

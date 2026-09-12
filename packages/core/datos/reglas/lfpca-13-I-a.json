@@ -1,0 +1,71 @@
+{
+  "inicio": {
+    "primerDia": "siguiente_habil"
+  },
+  "prorrogaSiVenceInhabil": true,
+  "incluyeDiaVencimiento": true,
+  "vigenteHasta": null,
+  "nivelFuente": "A",
+  "verificadoEl": "2026-09-12",
+  "id": "lfpca-13-I-a",
+  "procedimiento": "juicio_contencioso_administrativo_federal_demanda",
+  "descripcion": "Demanda de juicio contencioso administrativo federal contra resolucion notificada",
+  "plazo": {
+    "cantidad": 30,
+    "unidad": "dias_habiles"
+  },
+  "surtimiento": [
+    {
+      "forma": "personal",
+      "desplazamiento": 1,
+      "unidad": "dias_habiles",
+      "fundamento": {
+        "ordenamiento": "Codigo Fiscal de la Federacion",
+        "articulo": "135",
+        "parrafo": "primero",
+        "publicacion": "Texto vigente, ultima reforma DOF 09-04-2026",
+        "archivo": "CFF.md",
+        "linea": 14647
+      }
+    },
+    {
+      "forma": "buzon_tributario",
+      "desplazamiento": 1,
+      "unidad": "dias_habiles",
+      "fundamento": {
+        "ordenamiento": "Codigo Fiscal de la Federacion",
+        "articulo": "135",
+        "parrafo": "primero",
+        "publicacion": "Texto vigente, ultima reforma DOF 09-04-2026",
+        "archivo": "CFF.md",
+        "linea": 14647
+      }
+    },
+    {
+      "forma": "oficio",
+      "desplazamiento": 1,
+      "unidad": "dias_habiles",
+      "fundamento": {
+        "ordenamiento": "Codigo Fiscal de la Federacion",
+        "articulo": "135",
+        "parrafo": "primero",
+        "publicacion": "Texto vigente, ultima reforma DOF 09-04-2026",
+        "archivo": "CFF.md",
+        "linea": 14647
+      }
+    }
+  ],
+  "calendarios": [
+    "tfja-2026"
+  ],
+  "fundamento": {
+    "ordenamiento": "Ley Federal de Procedimiento Contencioso Administrativo",
+    "articulo": "13",
+    "fraccion": "I",
+    "inciso": "a",
+    "publicacion": "Texto vigente, ultima reforma DOF 09-06-2026",
+    "archivo": "LFPCA.md",
+    "linea": 488
+  },
+  "vigenteDesde": "2016-06-13"
+}

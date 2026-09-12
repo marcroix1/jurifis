@@ -1,0 +1,29 @@
+{
+  "inicio": {
+    "primerDia": "siguiente_habil"
+  },
+  "prorrogaSiVenceInhabil": true,
+  "incluyeDiaVencimiento": true,
+  "vigenteHasta": null,
+  "nivelFuente": "A",
+  "verificadoEl": "2026-09-12",
+  "id": "lfpca-17",
+  "procedimiento": "juicio_contencioso_administrativo_federal_ampliacion",
+  "descripcion": "Ampliacion de la demanda de nulidad",
+  "plazo": {
+    "cantidad": 10,
+    "unidad": "dias_habiles"
+  },
+  "surtimiento": [],
+  "calendarios": [
+    "tfja-2026"
+  ],
+  "fundamento": {
+    "ordenamiento": "Ley Federal de Procedimiento Contencioso Administrativo",
+    "articulo": "17",
+    "publicacion": "Texto vigente, ultima reforma DOF 09-06-2026",
+    "archivo": "LFPCA.md",
+    "linea": 731
+  },
+  "vigenteDesde": "2016-06-13"
+}

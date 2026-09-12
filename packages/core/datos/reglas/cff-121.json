@@ -1,0 +1,70 @@
+{
+  "inicio": {
+    "primerDia": "siguiente_habil"
+  },
+  "prorrogaSiVenceInhabil": true,
+  "incluyeDiaVencimiento": true,
+  "vigenteHasta": null,
+  "nivelFuente": "A",
+  "verificadoEl": "2026-09-12",
+  "id": "cff-121",
+  "procedimiento": "recurso_de_revocacion",
+  "descripcion": "Recurso de revocacion ante la autoridad fiscal, por buzon tributario",
+  "plazo": {
+    "cantidad": 30,
+    "unidad": "dias_habiles"
+  },
+  "surtimiento": [
+    {
+      "forma": "personal",
+      "desplazamiento": 1,
+      "unidad": "dias_habiles",
+      "fundamento": {
+        "ordenamiento": "Codigo Fiscal de la Federacion",
+        "articulo": "135",
+        "parrafo": "primero",
+        "publicacion": "Texto vigente, ultima reforma DOF 09-04-2026",
+        "archivo": "CFF.md",
+        "linea": 14647
+      }
+    },
+    {
+      "forma": "buzon_tributario",
+      "desplazamiento": 1,
+      "unidad": "dias_habiles",
+      "fundamento": {
+        "ordenamiento": "Codigo Fiscal de la Federacion",
+        "articulo": "135",
+        "parrafo": "primero",
+        "publicacion": "Texto vigente, ultima reforma DOF 09-04-2026",
+        "archivo": "CFF.md",
+        "linea": 14647
+      }
+    },
+    {
+      "forma": "oficio",
+      "desplazamiento": 1,
+      "unidad": "dias_habiles",
+      "fundamento": {
+        "ordenamiento": "Codigo Fiscal de la Federacion",
+        "articulo": "135",
+        "parrafo": "primero",
+        "publicacion": "Texto vigente, ultima reforma DOF 09-04-2026",
+        "archivo": "CFF.md",
+        "linea": 14647
+      }
+    }
+  ],
+  "calendarios": [
+    "sat-2026"
+  ],
+  "fundamento": {
+    "ordenamiento": "Codigo Fiscal de la Federacion",
+    "articulo": "121",
+    "parrafo": "primero",
+    "publicacion": "Texto vigente, ultima reforma DOF 09-04-2026",
+    "archivo": "CFF.md",
+    "linea": 13924
+  },
+  "vigenteDesde": "2014-01-01"
+}

@@ -1,0 +1,238 @@
+{
+  "id": "tfja-2026",
+  "nombre": "Dias inhabiles del Tribunal Federal de Justicia Administrativa 2026",
+  "aniosCubiertos": [
+    2026
+  ],
+  "nivelFuente": "B",
+  "fuente": "Pagina oficial del Tribunal, https://www.tfja.gob.mx/servicios/dinh2026/. La pagina no cita el numero del acuerdo del Pleno que publica estos dias.",
+  "consultadoEl": "2026-09-12",
+  "finesDeSemanaInhabiles": true,
+  "dias": [
+    {
+      "fecha": "2026-02-02",
+      "motivo": "Conmemoracion del 5 de febrero",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-03-16",
+      "motivo": "Conmemoracion del 21 de marzo, dia del Benemerito de las Americas",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-04-01",
+      "motivo": "Suspension de labores declarada, sin motivo expreso en la pagina",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-04-02",
+      "motivo": "Suspension de labores declarada, sin motivo expreso en la pagina",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-04-03",
+      "motivo": "Suspension de labores declarada, sin motivo expreso en la pagina",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-05-01",
+      "motivo": "Suspension de labores declarada, sin motivo expreso en la pagina",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-05-04",
+      "motivo": "Suspension de labores declarada, sin motivo expreso en la pagina",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-05-05",
+      "motivo": "Suspension de labores declarada, sin motivo expreso en la pagina",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-07-13",
+      "motivo": "Suspension de labores declarada, la pagina no la incluye expresamente en el periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-07-14",
+      "motivo": "Suspension de labores declarada, la pagina no la incluye expresamente en el periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-07-15",
+      "motivo": "Primer periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-07-16",
+      "motivo": "Primer periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-07-17",
+      "motivo": "Primer periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-07-20",
+      "motivo": "Primer periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-07-21",
+      "motivo": "Primer periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-07-22",
+      "motivo": "Primer periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-07-23",
+      "motivo": "Primer periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-07-24",
+      "motivo": "Primer periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-07-27",
+      "motivo": "Primer periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-07-28",
+      "motivo": "Primer periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-07-29",
+      "motivo": "Primer periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-07-30",
+      "motivo": "Primer periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-07-31",
+      "motivo": "Primer periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-08-28",
+      "motivo": "Conmemoracion del 27 de agosto, dia del empleado del TFJA",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-09-14",
+      "motivo": "Suspension de labores declarada, sin motivo expreso en la pagina",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-09-15",
+      "motivo": "Suspension de labores declarada, sin motivo expreso en la pagina",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-09-16",
+      "motivo": "Suspension de labores declarada, sin motivo expreso en la pagina",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-10-12",
+      "motivo": "Suspension de labores declarada, sin motivo expreso en la pagina",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-11-02",
+      "motivo": "Suspension de labores declarada, sin motivo expreso en la pagina",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-11-16",
+      "motivo": "Conmemoracion del 20 de noviembre",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-12-14",
+      "motivo": "Suspension de labores declarada, la pagina no la incluye expresamente en el periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-12-15",
+      "motivo": "Segundo periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-12-16",
+      "motivo": "Segundo periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-12-17",
+      "motivo": "Segundo periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-12-18",
+      "motivo": "Segundo periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-12-21",
+      "motivo": "Segundo periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-12-22",
+      "motivo": "Segundo periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-12-23",
+      "motivo": "Segundo periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-12-24",
+      "motivo": "Segundo periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-12-25",
+      "motivo": "Segundo periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-12-28",
+      "motivo": "Segundo periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-12-29",
+      "motivo": "Segundo periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-12-30",
+      "motivo": "Segundo periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2026-12-31",
+      "motivo": "Segundo periodo vacacional",
+      "fundamento": "pagina TFJA dinh2026"
+    },
+    {
+      "fecha": "2027-01-01",
+      "motivo": "Declarado inhabil en el mismo renglon de diciembre de 2026",
+      "fundamento": "pagina TFJA dinh2026"
+    }
+  ]
+}

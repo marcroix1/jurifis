@@ -1,0 +1,53 @@
+{
+  "id": "lfpa-28-2026",
+  "nombre": "Dias inhabiles del procedimiento administrativo federal 2026",
+  "aniosCubiertos": [
+    2026
+  ],
+  "nivelFuente": "A",
+  "fuente": "Ley Federal de Procedimiento Administrativo, articulo 28 parrafo segundo, texto vigente con ultima reforma DOF 14-11-2025, archivo LFPA.md lineas 539 a 545. El articulo agrega las vacaciones generales de la dependencia y los dias de suspension de labores, que se publican por acuerdo del titular de la dependencia en el Diario Oficial de la Federacion. Ese calendario es por dependencia y debe superponerse caso por caso. El supuesto del 1o. de diciembre cada seis anios no aplica en 2026 por no ser anio de transmision del Poder Ejecutivo Federal.",
+  "consultadoEl": "2026-09-12",
+  "finesDeSemanaInhabiles": true,
+  "dias": [
+    {
+      "fecha": "2026-01-01",
+      "motivo": "1o. de enero",
+      "fundamento": "Ley Federal de Procedimiento Administrativo articulo 28"
+    },
+    {
+      "fecha": "2026-02-05",
+      "motivo": "5 de febrero",
+      "fundamento": "Ley Federal de Procedimiento Administrativo articulo 28"
+    },
+    {
+      "fecha": "2026-05-01",
+      "motivo": "1o. de mayo",
+      "fundamento": "Ley Federal de Procedimiento Administrativo articulo 28"
+    },
+    {
+      "fecha": "2026-05-05",
+      "motivo": "5 de mayo",
+      "fundamento": "Ley Federal de Procedimiento Administrativo articulo 28"
+    },
+    {
+      "fecha": "2026-09-01",
+      "motivo": "1o. de septiembre",
+      "fundamento": "Ley Federal de Procedimiento Administrativo articulo 28"
+    },
+    {
+      "fecha": "2026-09-16",
+      "motivo": "16 de septiembre",
+      "fundamento": "Ley Federal de Procedimiento Administrativo articulo 28"
+    },
+    {
+      "fecha": "2026-11-20",
+      "motivo": "20 de noviembre",
+      "fundamento": "Ley Federal de Procedimiento Administrativo articulo 28"
+    },
+    {
+      "fecha": "2026-12-25",
+      "motivo": "25 de diciembre",
+      "fundamento": "Ley Federal de Procedimiento Administrativo articulo 28"
+    }
+  ]
+}
