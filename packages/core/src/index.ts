@@ -44,3 +44,4 @@ export function calcular(entrada: EntradaComputo): ResultadoComputo {
 }
 export * as jurisprudencia from './jurisprudencia/index.js';
 export * as credito from './credito/index.js';
+export * as expediente from './expediente/index.js';
