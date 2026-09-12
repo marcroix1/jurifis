@@ -232,8 +232,11 @@ export function calcularPlazo(
     for (let d = aDias(inicio); d <= aDias(hoy) && d <= aDias(vence); d++) {
       if (almanaque.esHabil(aFecha(d)) && dentroDeSuspension(aFecha(d), entrada) === null) t++;
     }
+    // El conteo arranca en el inicio del computo, nunca antes: si la fecha de
+    // referencia es anterior, los dias entre la notificacion y el inicio no son
+    // dias del plazo y no deben sumarse a los restantes.
     let r = 0;
-    for (let d = aDias(hoy) + 1; d <= aDias(vence); d++) {
+    for (let d = Math.max(aDias(hoy) + 1, aDias(inicio)); d <= aDias(vence); d++) {
       if (almanaque.esHabil(aFecha(d)) && dentroDeSuspension(aFecha(d), entrada) === null) r++;
     }
     transcurridos = t;

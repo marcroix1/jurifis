@@ -13,3 +13,18 @@ describe('el producto responde HOY', () => {
     expect(sin.length).toBe(0);
   });
 });
+
+import { buscarRegla } from '../src/index.js';
+describe('dias transcurridos y restantes', () => {
+  it('nunca suman mas que el plazo, aun si la referencia es previa al inicio', () => {
+    for (const id of ['lfpca-13-I-a', 'cff-121', 'rri-6', 'lfpa-85', 'lamp-17']) {
+      const regla = buscarRegla(id);
+      const forma = regla.surtimiento[0]!.forma;
+      for (const hoy of ['2026-09-12', '2026-09-20', '2026-10-01']) {
+        const r = calcular({ reglaId: id, fechaNotificacion: '2026-09-12', formaNotificacion: forma, hoy });
+        if (r.vence === null) continue;
+        expect(r.diasTranscurridos! + r.diasRestantes!).toBe(regla.plazo.cantidad);
+      }
+    }
+  });
+});

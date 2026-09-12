@@ -7,10 +7,14 @@ o el calendario, devuelve el estado degradado y dice que falta.
 
 ## Estado, 12 de septiembre de 2026
 
-Fase 1 arrancada. Nucleo del motor de plazos funcionando, 18 pruebas en verde.
+Fase 1 arrancada. Motor de plazos, base de datos, cuestionario y aplicacion web funcionando.
+64 pruebas en el nucleo y 34 en la base de datos, todas en verde.
 
 - `packages/core/src` motor puro, sin entrada ni salida, sin el objeto Date nativo.
-- `packages/core/datos/reglas` doce reglas de plazo, cada una con archivo y linea del acervo.
+- `packages/core/datos/reglas` diecinueve reglas de plazo en seis ordenamientos, cada una con archivo y linea del acervo.
+- `packages/core/src/diagnostico` cuestionario con validador de lenguaje prudente.
+- `packages/db` veinte tablas con aislamiento por organizacion.
+- `apps/web` landing, calculadora conectada al motor y panel administrativo.
 - `packages/core/datos/calendarios` cinco calendarios: Tribunal 2026, autoridades fiscales 2026,
   articulo 12 del Codigo Fiscal, articulo 19 de la Ley de Amparo y articulo 28 de la Ley Federal
   de Procedimiento Administrativo.
