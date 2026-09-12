@@ -440,6 +440,23 @@ describe('la traza dice de donde sale cada cifra', () => {
     expect(conFundamento.length).toBeGreaterThanOrEqual(4);
   });
 
+  it('la numeracion de los pasos corre seguida, sin huecos', () => {
+    const casos: EntradaCredito[] = [
+      BASE,
+      { ...BASE, multas: [{ concepto: 'Multa', importe: aCentavos('100.00') }] },
+      { ...BASE, pagos: [{ fecha: '2026-09-01', importe: aCentavos('100.00'), concepto: 'Abono' }] },
+      {
+        ...BASE,
+        multas: [{ concepto: 'Multa', importe: aCentavos('100.00'), fechaExigibilidad: '2026-07-15' }],
+        pagos: [{ fecha: '2026-09-01', importe: aCentavos('100.00'), concepto: 'Abono' }],
+      },
+    ];
+    for (const caso of casos) {
+      const numeros = estimar(caso).traza.map((p) => p.paso);
+      expect(numeros).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
+    }
+  });
+
   it('cada fuente trae ordenamiento, articulo, publicacion y archivo del acervo', () => {
     const r = estimar(BASE);
     expect(r.fuentes.length).toBeGreaterThan(0);

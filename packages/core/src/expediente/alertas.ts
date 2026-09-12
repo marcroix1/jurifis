@@ -157,7 +157,9 @@ export function alertaDePlazo(
     nivel,
     criticidad: CRITICIDAD[nivel],
     titulo: `${plazo.descripcion}`,
-    detalle: `Vence el ${vence}. ${cuenta}${notaFuente}`,
+    // La fecha no se repite en el detalle: viaja en el campo vence, y quien
+    // pinta la alerta ya la muestra una vez.
+    detalle: `${cuenta}${notaFuente}`,
     accion:
       restantes <= 2
         ? 'Prepara y presenta ya. No queda margen para otra revision.'

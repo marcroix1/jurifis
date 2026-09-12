@@ -298,17 +298,21 @@ export function estimarCredito(entrada: EntradaCredito, corpus: CorpusCredito): 
       actualizacionDeMultas += redondearCentavos(multa.importe * r.factor.factor) - multa.importe;
     }
   }
-  if (multas.length > 0) {
-    traza.push({
-      paso: 3,
-      concepto: 'actualizacion de multas',
-      importe: actualizacionDeMultas,
-      detalle:
-        multasSinFecha.length === multas.length
+  // El paso se emite siempre, aunque no haya multas: una traza con huecos en la
+  // numeracion se lee como una traza incompleta.
+  traza.push({
+    paso: 3,
+    concepto: 'actualizacion de multas',
+    importe: actualizacionDeMultas,
+    detalle:
+      multas.length === 0
+        ? 'No aplico. No se registraron multas en el expediente.'
+        : multasSinFecha.length === multas.length
           ? `Las multas suman ${pesos(totalMultas)} y no se actualizaron: no se registro la fecha en que debieron pagarse.`
           : `Las multas suman ${pesos(totalMultas)} y su actualizacion asciende a ${pesos(actualizacionDeMultas)}.`,
-      fundamento: FUNDAMENTO_MULTAS,
-    });
+    fundamento: FUNDAMENTO_MULTAS,
+  });
+  if (multas.length > 0) {
     fuentes.push(FUNDAMENTO_MULTAS);
     if (multasSinFecha.length > 0) {
       advertencias.push(
@@ -397,7 +401,15 @@ export function estimarCredito(entrada: EntradaCredito, corpus: CorpusCredito): 
   // Paso 6. Aplicacion de los pagos, articulo 20.
   const actualizacionTotal = actualizacionDelPrincipal + actualizacionDeMultas;
   let imputacion: ImputacionPagos | null = null;
-  if (totalPagos > 0) {
+  if (totalPagos === 0) {
+    traza.push({
+      paso: 6,
+      concepto: 'aplicacion de los pagos',
+      importe: 0,
+      detalle: 'No aplico. No se registraron pagos en el expediente.',
+      fundamento: FUNDAMENTO_IMPUTACION,
+    });
+  } else {
     let resto = totalPagos;
     const aRecargos = Math.min(resto, recargos);
     resto -= aRecargos;
