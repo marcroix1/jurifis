@@ -1,3 +1,4 @@
+import { AVISO_DEMO, DEMO_PUBLICA } from '@/lib/demo';
 'use client';
 
 import { useState } from 'react';
@@ -14,6 +15,14 @@ const VACIO = {
 };
 
 export function FormularioProspecto({ origen }: { origen: string }) {
+  if (DEMO_PUBLICA) {
+    return (
+      <div className="rounded-xl border border-dashed border-borde-fuerte bg-superficie/40 p-6 text-sm text-tenue">
+        {AVISO_DEMO}
+      </div>
+    );
+  }
+
   const [datos, setDatos] = useState(VACIO);
   const [enviando, setEnviando] = useState(false);
   const [enviado, setEnviado] = useState(false);

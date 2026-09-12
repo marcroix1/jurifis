@@ -1,3 +1,4 @@
+import { DEMO_PUBLICA, respuestaApagada } from '@/lib/demo';
 import { NextResponse } from 'next/server';
 
 import { crearExpediente, vistaDeCartera } from '@/lib/almacen-expedientes';
@@ -29,6 +30,7 @@ export async function GET(): Promise<Response> {
 
 /** Alta de expediente. Nace en la etapa "nuevo" y sin eventos. */
 export async function POST(peticion: Request): Promise<Response> {
+  if (DEMO_PUBLICA) return respuestaApagada();
   const cuerpo = await cuerpoJson(peticion);
   if (!cuerpo.ok) return cuerpo.respuesta;
 

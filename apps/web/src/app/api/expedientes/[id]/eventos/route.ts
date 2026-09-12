@@ -1,3 +1,4 @@
+import { DEMO_PUBLICA, respuestaApagada } from '@/lib/demo';
 import { NextResponse } from 'next/server';
 
 import type { FormaNotificacion } from '@jurifis/core';
@@ -21,6 +22,7 @@ export async function POST(
   peticion: Request,
   contexto: { params: Promise<{ id: string }> },
 ): Promise<Response> {
+  if (DEMO_PUBLICA) return respuestaApagada();
   const { id } = await contexto.params;
   const cuerpo = await cuerpoJson(peticion);
   if (!cuerpo.ok) return cuerpo.respuesta;

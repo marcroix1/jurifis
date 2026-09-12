@@ -1,3 +1,4 @@
+import { AVISO_DEMO, DEMO_PUBLICA } from '@/lib/demo';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -32,6 +33,20 @@ export default async function PaginaAdmin({
 }: {
   searchParams: Promise<{ pestana?: string }>;
 }) {
+  if (DEMO_PUBLICA) {
+    return (
+      <main className="mx-auto max-w-3xl px-5 py-20 sm:px-8">
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-acento">Panel</p>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight">Cerrado en la demostración pública</h1>
+        <p className="mt-5 text-tenue">{AVISO_DEMO}</p>
+        <p className="mt-4 text-sm text-tenue">
+          El panel administra usuarios, prospectos y el corpus jurídico. Va detrás de autenticación
+          y de aislamiento por organización antes de exponerse en internet.
+        </p>
+      </main>
+    );
+  }
+
   const { pestana } = await searchParams;
   const activa: Clave = esClave(pestana) ? pestana : 'prospectos';
 

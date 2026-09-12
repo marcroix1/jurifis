@@ -1,3 +1,4 @@
+import { DEMO_PUBLICA, respuestaApagada } from '@/lib/demo';
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 
@@ -23,6 +24,7 @@ const esquemaProspecto = z.object({
 });
 
 export async function POST(peticion: Request): Promise<Response> {
+  if (DEMO_PUBLICA) return respuestaApagada();
   let cuerpo: unknown;
   try {
     cuerpo = await peticion.json();
